@@ -1,0 +1,952 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lineage · Agent NFT</title>
+    <link rel="icon" type="image/jpeg" href="data:image/jpeg;base64,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" />
+    <link rel="apple-touch-icon" href="data:image/jpeg;base64,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" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400&display=swap"
+    />
+    <link rel="stylesheet" href="hark.css" />
+    <link rel="stylesheet" href="hark-hero.css" />
+    <link rel="stylesheet" href="hark-charts.css" />
+    <style>
+      /* Theme: deep-space Web3 launch. Dark only; overrides the kit's tokens and surfaces. */
+      :root, :root[data-theme="light"], :root[data-theme="dark"] {
+        color-scheme: dark;
+        --x-violet: #7c3aed; --x-cyan: #00e5ff; --x-pink: #ff4081;
+        --x-btn: linear-gradient(120deg, #6d28d9, #9d23c4 55%, #c2185b);
+        --x-text-grad: linear-gradient(100deg, #ffffff 5%, #c4b5fd 35%, #00e5ff 68%, #ff4081 100%);
+        --x-eyebrow-grad: linear-gradient(90deg, #a78bfa, #00e5ff 55%, #ff80ab);
+        --x-edge: linear-gradient(135deg, rgb(124 58 237 / 0.65), rgb(255 255 255 / 0.07) 38%, rgb(0 229 255 / 0.4) 70%, rgb(255 64 129 / 0.55));
+        --x-glass: linear-gradient(rgb(255 255 255 / 0.04), rgb(255 255 255 / 0.04)) rgb(12 14 26 / 0.62);
+        --x-tint: linear-gradient(rgb(255 255 255 / 0.06), rgb(255 255 255 / 0.06)) #12142a;
+        --x-hl: #1d1640;
+        --x-glow: 0 0 0 1px rgb(124 58 237 / 0.22), 0 18px 60px -16px rgb(124 58 237 / 0.6), 0 0 70px -24px rgb(0 229 255 / 0.55);
+        --x-mono: "Geist Mono", ui-monospace, monospace;
+        --text-primary: #f4f5fb; --text-secondary: #9ba1b8; --text-tertiary: rgb(244 245 251 / 0.3);
+        --fill-primary-on: #07080f; --fill-tertiary: rgb(255 255 255 / 0.04);
+        --stroke-primary: rgb(255 255 255 / 0.14); --stroke-secondary: rgb(255 255 255 / 0.07);
+        --hover-wash: rgb(255 255 255 / 0.06);
+        --fill-system-orange: #ff4081; --stroke-system-orange: rgb(255 64 129 / 0.22);
+        --r-m: 20px; --r-l: 24px;
+        --hark-shadow: 0 20px 60px -24px rgb(0 0 0 / 0.9);
+        --chart-ink: #00e5ff; --chart-ink-2: rgb(244 245 251 / 0.55);
+        --chart-grid: rgb(255 255 255 / 0.06); --chart-reference: rgb(255 255 255 / 0.16);
+      }
+      html { background: #07080f; }
+      body { background: transparent; }
+      body::before {
+        content: ""; position: fixed; inset: -20vmax; z-index: -2; pointer-events: none;
+        background:
+          radial-gradient(36vmax 30vmax at 22% 24%, rgb(124 58 237 / 0.42), transparent 70%),
+          radial-gradient(30vmax 26vmax at 80% 18%, rgb(0 229 255 / 0.24), transparent 70%),
+          radial-gradient(34vmax 28vmax at 66% 78%, rgb(255 64 129 / 0.22), transparent 70%),
+          radial-gradient(26vmax 22vmax at 14% 84%, rgb(0 229 255 / 0.12), transparent 70%);
+        filter: blur(40px);
+        animation: x-aurora 42s ease-in-out infinite alternate;
+      }
+      @keyframes x-aurora {
+        0% { transform: translate3d(0, 0, 0) rotate(0deg) scale(1); }
+        50% { transform: translate3d(4vw, -3vh, 0) rotate(8deg) scale(1.08); }
+        100% { transform: translate3d(-3vw, 4vh, 0) rotate(-6deg) scale(1.02); }
+      }
+      body::after {
+        content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+        background-image:
+          url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
+          linear-gradient(rgb(255 255 255 / 0.035) 1px, transparent 1px),
+          linear-gradient(90deg, rgb(255 255 255 / 0.035) 1px, transparent 1px);
+        background-size: 200px 200px, 64px 64px, 64px 64px;
+        -webkit-mask-image: radial-gradient(ellipse 90% 70% at 50% 30%, #000 30%, transparent 90%);
+        mask-image: radial-gradient(ellipse 90% 70% at 50% 30%, #000 30%, transparent 90%);
+      }
+
+      /* Glass surfaces with a 1px gradient edge and a glow on hover */
+      .x-panel, .cards > div, .chart, .x-tree, .callout, .step, .breakdown, .table-wrap, .x-faq details, .stat {
+        position: relative; border: 0; border-radius: var(--r-l);
+        background: var(--x-glass);
+        -webkit-backdrop-filter: blur(18px) saturate(1.4); backdrop-filter: blur(18px) saturate(1.4);
+        box-shadow: var(--hark-shadow);
+        transition: box-shadow 0.4s var(--ease-out);
+      }
+      :is(.x-panel, .cards > div, .chart, .x-tree, .callout, .step, .breakdown, .table-wrap, .x-faq details, .stat)::after {
+        content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1px; pointer-events: none;
+        background: var(--x-edge); opacity: 0.6; transition: opacity 0.4s var(--ease-out);
+        -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor;
+        mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+      }
+      :is(.x-panel, .cards > div, .chart, .x-tree, .callout, .step, .breakdown, .table-wrap, .x-faq details, .stat):hover { box-shadow: var(--hark-shadow), var(--x-glow); }
+      :is(.x-panel, .cards > div, .chart, .x-tree, .callout, .step, .breakdown, .table-wrap, .x-faq details, .stat):hover::after { opacity: 1; }
+      .breakdown { padding: 8px 24px 22px; }
+      .table-wrap { margin-inline: 0; padding: 20px 24px; }
+      .chart { padding: 22px 24px 14px; }
+      .cards > div { padding: 24px 26px; }
+      .callout { color: var(--text-primary); }
+
+      /* Nav */
+      .nav.glass { background: rgb(10 11 22 / 0.55); border: 1px solid rgb(255 255 255 / 0.1); -webkit-backdrop-filter: blur(20px) saturate(1.6); backdrop-filter: blur(20px) saturate(1.6); box-shadow: 0 10px 40px -12px rgb(0 0 0 / 0.8), 0 0 32px -12px rgb(124 58 237 / 0.7); }
+      .nav :focus-visible { outline-color: var(--x-cyan); }
+      .seg { background: #11131f; }
+      .seg a { color: var(--text-secondary); transition: color var(--dur-quick) ease; }
+      .seg a:hover { color: #fff; }
+      .seg a[aria-current="true"] { background: var(--x-btn); color: #fff; box-shadow: 0 0 18px -2px rgb(124 58 237 / 0.75); }
+      .theme-btn { display: none; }
+
+      /* Hero: open layout on the space background, no photo panel */
+      .hero { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 28px 40px; align-items: end; min-height: 0; padding-top: clamp(32px, 7vw, 96px); border-radius: 0; overflow: visible; background: none; box-shadow: none; isolation: auto; }
+      .hero::after { display: none; }
+      .hero__copy { grid-column: 1; grid-row: 1; padding: 0; max-width: none; gap: 18px; }
+      .hero h1 { font: var(--weight-bold) clamp(64px, 12vw, 128px)/0.92 var(--sans); letter-spacing: -0.055em; }
+      .x-grad { display: inline-block; padding: 0 0.06em 0.06em 0; background: var(--x-text-grad); -webkit-background-clip: text; background-clip: text; color: #c4b5fd; -webkit-text-fill-color: transparent; filter: drop-shadow(0 0 32px rgb(124 58 237 / 0.45)); }
+      .x-h1sub { display: block; margin-top: 14px; font: var(--weight-medium) clamp(20px, 2.6vw, 30px)/1.2 var(--sans); letter-spacing: -0.01em; color: var(--text-secondary); }
+      .hero__sub { font: var(--weight-regular) var(--size-lede)/1.5 var(--sans); color: #c9cbe0; max-width: 46ch; }
+      .hero__meta { font-family: var(--x-mono); color: var(--text-secondary); }
+      .hero > .callout { position: relative; top: auto; right: auto; grid-column: 2; grid-row: 1; justify-self: end; width: min(340px, 100%); margin: 0; }
+      .hero__img { position: relative; inset: auto; z-index: auto; grid-column: 1 / -1; grid-row: 2; height: clamp(180px, 26vw, 320px); object-position: 50% 50%; border-radius: var(--r-l); box-shadow: var(--x-glow); }
+      .hero__credit { position: static; grid-column: 1 / -1; grid-row: 3; justify-self: end; margin-top: -16px; padding: 0; background: none; -webkit-backdrop-filter: none; backdrop-filter: none; color: var(--text-secondary); }
+      @media (max-width: 760px) {
+        .hero { grid-template-columns: minmax(0, 1fr); }
+        .hero > .callout { grid-column: 1; grid-row: 2; justify-self: stretch; width: auto; margin: 0; }
+        .hero__img { grid-row: 3; }
+        .hero__credit { grid-row: 4; }
+      }
+
+      /* Gradient eyebrows and headings */
+      .hero__eyebrow, .head__eyebrow { justify-self: start; width: fit-content; padding: 0; border: 0; border-radius: 0; -webkit-backdrop-filter: none; backdrop-filter: none; font: var(--weight-medium) var(--size-caption)/1.3 var(--x-mono); letter-spacing: 0.16em; text-transform: uppercase; background: var(--x-eyebrow-grad); -webkit-background-clip: text; background-clip: text; color: #8be9f7; -webkit-text-fill-color: transparent; }
+      .head h2 { font: var(--weight-bold) clamp(28px, 3.6vw, 44px)/1.15 var(--sans); letter-spacing: -0.02em; color: #fff; }
+      .section { border-top-color: rgb(255 255 255 / 0.06); }
+      .step h3, .cards h3, .x-panel h3 { color: #fff; font-weight: var(--weight-bold); }
+
+      /* Numbers and DNA in mono */
+      .stat__fig, .step__num, td.num, .breakdown dd, .x-hex, .pill, .step__pills b, .timeline__when { font-family: var(--x-mono); }
+      .stats { gap: 16px; padding-top: 0; }
+      .stat, .stat:first-child { padding: 22px 24px; border: 0; }
+      .stat__fig, .step__num, .breakdown .row--total dd { width: fit-content; background: var(--x-text-grad); -webkit-background-clip: text; background-clip: text; color: #c4b5fd; -webkit-text-fill-color: transparent; }
+      .stat__fig { font-size: clamp(36px, 5vw, 56px); line-height: 1.05; letter-spacing: -0.04em; }
+      .breakdown .row--total dd { font-family: var(--x-mono); }
+      @media (max-width: 760px) { .stat, .stat:first-child { border-top: 0; padding: 18px 20px; } }
+
+      /* Steps as glass cards */
+      .steps { display: grid; gap: 16px; }
+      .step, .steps > .step:last-child { padding: 28px; border-bottom: 0; }
+      .step__pills li { border-color: rgb(255 255 255 / 0.12); background: var(--x-tint); color: #b4b9cc; }
+      tr.is-highlight > .muted { color: #c9cbe0; }
+
+      /* Buttons: glowing gradient pills */
+      .btn { min-height: 38px; padding: 8px 18px; border: 0; border-radius: var(--r-pill); background: var(--x-btn); color: #fff; font: var(--type-label); box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.14), 0 6px 24px -6px rgb(124 58 237 / 0.75), 0 0 20px -6px rgb(255 64 129 / 0.55); transition: box-shadow 0.3s var(--ease-out), transform 0.3s var(--ease-out); }
+      .btn:hover { box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.24), 0 8px 32px -4px rgb(124 58 237 / 0.95), 0 0 30px -4px rgb(0 229 255 / 0.6); transform: translateY(-1px); }
+      .btn { background-color: #7e22ce; }
+      @media (pointer: coarse), (max-width: 599px) { .btn { min-height: var(--tap); } }
+      .btn option { background: #0d0f1a; color: #fff; }
+      button.btn { cursor: pointer; }
+      .x-disabled, button.btn:disabled {
+        opacity: 0.6; cursor: not-allowed; transform: none;
+        box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.12);
+        background: linear-gradient(110deg, transparent 35%, rgb(255 255 255 / 0.3) 50%, transparent 65%) 150% 0 / 250% 100% no-repeat, var(--x-btn);
+        background-color: #7e22ce;
+        animation: x-shimmer 3s linear infinite;
+      }
+      .x-disabled { pointer-events: none; }
+      @keyframes x-shimmer { to { background-position: -100% 0, 0 0; } }
+      .link { text-decoration-color: rgb(0 229 255 / 0.5); }
+      .link:hover { color: var(--x-cyan); }
+
+      /* Chips, pills, table, timeline, footer */
+      .chip { background: var(--x-tint); box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.1); color: #c9cbe0; }
+      .chip--solid { background: var(--x-btn); color: #fff; box-shadow: 0 0 18px -4px rgb(124 58 237 / 0.8); }
+      .chip--solid::before { background: var(--x-cyan); box-shadow: 0 0 8px var(--x-cyan); }
+      .pill { background: var(--x-tint); color: #c9cbe0; }
+      tr.is-highlight > * { background: var(--x-hl); }
+      tr.is-highlight > :first-child { box-shadow: -12px 0 var(--x-hl); }
+      tr.is-highlight > :last-child { box-shadow: 12px 0 var(--x-hl); }
+      @media (max-width: 599px) { .table-wrap tbody tr.is-highlight { background: var(--x-hl); } }
+      .timeline > li.is-current .timeline__when::before { background: var(--x-pink); box-shadow: 0 0 0 4px rgb(255 64 129 / 0.2), 0 0 16px var(--x-pink); }
+      .foot nav a { background: var(--x-tint); }
+      .badge { background: var(--x-tint); color: var(--text-primary); box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.1); }
+      .badge:hover { box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.2), 0 0 24px -6px rgb(124 58 237 / 0.7); }
+      .band img { border-radius: var(--r-l); box-shadow: var(--x-glow); }
+
+      /* Robots on dark glass tiles with a glow halo */
+      .x-bot { display: block; border-radius: var(--r-m); overflow: hidden; background: #0d0f1a; box-shadow: 0 0 0 1px rgb(255 255 255 / 0.1), 0 0 36px -6px rgb(124 58 237 / 0.75), 0 0 72px -16px rgb(0 229 255 / 0.55); }
+      .x-bot svg { display: block; width: 100%; height: auto; }
+      .x-live { width: 96px; justify-self: start; transition: opacity var(--dur-quick) ease; }
+      .x-genes { display: flex; flex-wrap: wrap; gap: 6px; }
+      .x-gene { display: inline-flex; gap: 6px; align-items: center; padding: 4px 10px; border-radius: var(--r-pill); background: var(--x-tint); font: var(--weight-regular) var(--size-caption)/1.3 var(--x-mono); color: #c9cbe0; box-shadow: inset 0 0 0 1px var(--x-c, rgb(255 255 255 / 0.12)); }
+      .x-gene b { font-weight: var(--weight-regular); color: var(--x-c); }
+      .x-gene--a { --x-c: var(--x-cyan); }
+      .x-gene--b { --x-c: var(--x-pink); }
+      .x-gene--m { --x-c: #ffcf4a; }
+      .x-marquee { overflow: hidden; margin-top: 16px; border-block: 1px solid var(--stroke-secondary); -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+      .x-marquee__track { display: flex; gap: 28px; width: max-content; padding: 14px 0; animation: x-scroll 50s linear infinite; }
+      .x-marquee__item { display: flex; align-items: center; gap: 10px; font: var(--weight-regular) var(--size-small)/1.3 var(--x-mono); color: var(--text-secondary); white-space: nowrap; }
+      .x-marquee__item .x-bot { width: 48px; border-radius: 10px; box-shadow: 0 0 0 1px rgb(255 255 255 / 0.1), 0 0 16px -4px rgb(124 58 237 / 0.8); }
+      @keyframes x-scroll { to { transform: translateX(-50%); } }
+      .x-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 16px; align-items: start; }
+      .x-panel { display: grid; gap: 14px; align-content: start; padding: 24px; }
+      .x-panel h3 { font: var(--type-heading); font-weight: var(--weight-bold); }
+      .x-panel .x-bot { width: min(100%, 240px); justify-self: center; margin-block: 8px; }
+      .x-gallery { display: grid; gap: 12px; margin: 0; }
+      .x-gallery__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+      .x-gallery figcaption, .x-fig figcaption { font: var(--type-small); color: var(--text-secondary); }
+      .x-tile { display: grid; gap: 8px; margin: 0; }
+      .x-tile__tier { display: flex; align-items: center; gap: 6px; font: var(--weight-regular) var(--size-caption)/1.3 var(--x-mono); color: var(--text-secondary); }
+      .x-tile__tier::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--x-tc); box-shadow: 0 0 8px var(--x-tc); }
+      .x-tile__tier b { font-weight: var(--weight-medium); color: var(--text-primary); }
+      @media (max-width: 599px) { .x-gallery__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; } }
+      .x-fig { margin: 0; }
+      .x-fig .x-bot { width: min(100%, 280px); }
+      .x-show { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+      .x-show figure { display: grid; gap: 12px; margin: 0; }
+      .x-show img { display: block; width: 100%; height: auto; border-radius: var(--r-l); box-shadow: var(--x-glow); }
+      .x-show figcaption { font: var(--type-label); color: var(--text-primary); }
+      @media (max-width: 700px) { .x-show { grid-template-columns: minmax(0, 1fr); } }
+      .x-prog { display: grid; gap: 6px; }
+      .x-prog__label { font: var(--weight-regular) var(--size-small)/1.3 var(--x-mono); color: var(--text-primary); }
+      .x-prog__bar { height: 8px; border-radius: var(--r-pill); background: var(--x-tint); box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.1); overflow: hidden; }
+      .x-prog__fill { display: block; height: 100%; background: var(--x-btn); }
+      .x-hex { font-size: var(--size-small); overflow-wrap: anywhere; color: #8be9f7; }
+      .x-addr { display: grid; gap: 6px; }
+      .x-addr__label { font: var(--type-tag); color: var(--text-secondary); }
+      .x-addr__row { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: var(--r-s); background: var(--x-tint); box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.1); }
+      .x-addr__row .x-hex { flex: 1; min-width: 0; font-family: var(--x-mono); }
+      .x-addr .fineprint .x-hex { font-size: var(--size-caption); }
+      .x-copy { flex: none; min-height: 32px; padding: 4px 12px; border: 0; border-radius: var(--r-pill); background: #2a2350; background-color: #2a2350; box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.16); color: #ffffff; font: var(--type-tag); cursor: pointer; transition: box-shadow var(--dur-quick) var(--ease-out); }
+      .x-copy:hover { box-shadow: inset 0 0 0 1px rgb(0 229 255 / 0.6), 0 0 16px -4px var(--x-cyan); }
+      .x-copy:focus-visible { outline: 2px solid var(--x-cyan); outline-offset: 2px; }
+      @media (pointer: coarse), (max-width: 599px) { .x-copy { min-height: var(--tap); padding-inline: 16px; } .x-verify { display: inline-flex; align-items: center; min-height: var(--tap); } }
+      .x-prompt { margin: 0; padding: 14px 16px; border-radius: var(--r-s); background: var(--x-tint); box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.1); font: var(--type-small); line-height: 1.6; color: #c9cbe0; overflow-wrap: anywhere; }
+      .x-panel .links { margin: 0; }
+      .x-tree { padding: 24px; }
+      .x-tree svg { display: block; width: 100%; max-width: 720px; height: auto; margin: 0 auto; overflow: visible; }
+      .x-tree .x-link { stroke: rgb(124 58 237 / 0.55); stroke-width: 2; fill: none; }
+      .x-tree text { fill: var(--text-primary); font: var(--type-tag); text-anchor: middle; }
+      .x-tree .x-sub { fill: var(--text-secondary); font: var(--weight-regular) var(--size-caption) var(--x-mono); }
+      .x-tree .x-particle { fill: var(--x-cyan); filter: drop-shadow(0 0 4px var(--x-cyan)); }
+      .x-faq { display: grid; gap: 10px; }
+      .x-faq details { max-width: 760px; padding: 0 22px; }
+      .x-faq summary { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: var(--tap); padding: 16px 0; font: var(--type-body-strong); cursor: pointer; list-style: none; }
+      .x-faq summary::-webkit-details-marker { display: none; }
+      .x-faq summary::after { content: "+"; font: var(--type-heading); color: var(--x-cyan); transition: transform var(--dur-quick) var(--ease-out); }
+      .x-faq details[open] summary::after { transform: rotate(45deg); }
+      .x-faq details p { padding-bottom: 18px; color: var(--text-secondary); }
+
+      /* Scroll reveal: fade and rise */
+      .x-rv { opacity: 0; transform: translateY(28px); transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out); }
+      .x-rv.is-in { opacity: 1; transform: none; }
+
+      @media (prefers-reduced-motion: reduce) {
+        body::before, .x-marquee__track, .x-disabled, button.btn:disabled { animation: none; }
+        .x-particle { display: none; }
+        .x-rv { opacity: 1; transform: none; transition: none; }
+        .btn, .btn:hover { transition: none; transform: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page" id="top">
+      <header class="nav glass" data-auto></header>
+      <main class="main">
+        <section class="hero">
+          <img class="hero__img" src="showcase.jpg" alt="四只新版 Lineage 机器人：Mythic 金色王冠、Legendary 全息光环、Mythic 黑曜石变异、Rare 铬合金" />
+          <div class="hero__copy">
+            <p class="hero__eyebrow">BNB Smart Chain · .ai Agent ID 持有人专属</p>
+            <h1><span class="x-grad">Lineage</span><span class="x-h1sub">— 血统 Agent</span></h1>
+            <p class="hero__sub">
+              必须持有币安 .ai Agent ID 才能铸造，由你的 AI Agent 代为铸造（与 PTAH 相同）。每个 Agent ID 最多铸造 5 个 Gen0，1 USDT 起。两只机器人可繁殖下一代，后代每次被繁殖，父母和祖父母都能分到 USDT。
+            </p>
+            <p class="hero__meta">每 ID 最多 5 个 · 合计 15 USDT · 可铸 15,000 · 最高 Gen20</p>
+          </div>
+          <aside class="callout" aria-label="下一步">
+            <p class="callout__head"><span class="hark-mark" data-size="16"></span> 下一步</p>
+            <span class="x-bot x-live" id="hero-bot" role="img" aria-label="实时生成的 Lineage 机器人"></span>
+            <p class="callout__lead"><strong>合约已在 BSC 主网上线</strong> · 由你的 AI Agent 铸造</p>
+            <div class="x-addr">
+              <p class="x-addr__label">Lineage 合约（BSC 主网）</p>
+              <div class="x-addr__row"><code class="x-hex">0xbf5e47bD92bd5192B1F696DBFabF210FA30aF39a</code><button class="x-copy" type="button" data-copy="0xbf5e47bD92bd5192B1F696DBFabF210FA30aF39a" aria-label="复制 Lineage 合约地址">复制</button></div>
+              <p class="fineprint">画图合约 <code class="x-hex">0x682AF02B5de96d57BFc05163d0Bea2D36129f0c3</code></p>
+              <p><a class="chip chip--solid x-verify" href="https://repo.sourcify.dev/56/0xbf5e47bD92bd5192B1F696DBFabF210FA30aF39a" target="_blank" rel="noopener">源码已开源验证（Sourcify）</a></p>
+            </div>
+            <div class="x-prog">
+              <p class="x-prog__label">已铸造 0 / 15,000</p>
+              <div class="x-prog__bar" role="progressbar" aria-label="Gen0 铸造进度" aria-valuemin="0" aria-valuemax="15000" aria-valuenow="0"><span class="x-prog__fill" style="width: 0%"></span></div>
+              <p class="fineprint">另 5,000 已销毁（合约写死，永不铸造）</p>
+            </div>
+            <a class="btn" href="#mint">铸造 Gen0 · 1 USDT 起</a>
+          </aside>
+          <p class="hero__credit">图：Mythic、Legendary、Mythic、Rare 四只链上渲染</p>
+        </section>
+        <div class="x-marquee" aria-hidden="true"><div class="x-marquee__track" id="marquee"></div></div>
+
+        <section class="section" id="mythic" data-nav="典藏">
+          <div class="head">
+            <h2>神话级 Mythic 典藏</h2>
+            <p class="head__sub">Lineage 最高稀有度的视觉方向</p>
+          </div>
+          <div class="x-show">
+            <figure>
+              <img src="mythic_angel.jpg" alt="全息天使 Holographic Angel 机器人" />
+              <figcaption>全息天使 Holographic Angel · 神话级</figcaption>
+            </figure>
+            <figure>
+              <img src="mythic_devil.jpg" alt="黑曜恶魔 Obsidian Devil 机器人" />
+              <figcaption>黑曜恶魔 Obsidian Devil · 神话级</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="section" id="about" data-nav="简介">
+          <div class="head">
+            <p class="head__eyebrow">什么是 Lineage</p>
+            <h2>每只机器人都是链上生成的动态艺术。</h2>
+          </div>
+          <div class="prose">
+            <p>Lineage 是 BNB Chain 上的血统 Agent NFT。外观由 13 个基因字节决定：6 种材质（黄金仅 3%）、8 种眼睛、8 种头饰（王冠与光环最稀有）、6 种背景，组合出 Common、Rare、Epic、Legendary、Mythic 五档稀有度。</p>
+            <p>图像是动态 SVG：全息流光、扫描眼、天线脉冲、悬浮光环，全部由合约在链上生成。渲染合约可被永久冻结，艺术从此不再改动。</p>
+          </div>
+        </section>
+
+        <section class="section" id="dna" data-nav="DNA 实验室">
+          <div class="head">
+            <p class="head__eyebrow">DNA 实验室</p>
+            <h2>一串 DNA，决定一只机器人的全部外观。</h2>
+            <p class="head__sub">图像由链上 SVG 生成，没有外部服务器。</p>
+          </div>
+          <div class="x-grid">
+            <div class="x-panel">
+              <span class="x-bot" id="lab-bot" role="img" aria-label="DNA 实验室生成的机器人"></span>
+              <p class="x-hex" id="lab-hex"></p>
+              <div class="links">
+                <button class="btn" type="button" id="lab-roll">随机生成</button>
+                <button class="btn" type="button" id="lab-mut">强制变异</button>
+              </div>
+            </div>
+            <div class="breakdown" aria-live="polite"><dl id="lab-traits"></dl>
+              <p class="fineprint">强制变异把基因 12 设为 0：眼睛变红、红色光晕，直接定为 Mythic。</p>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <caption>材质出现概率（由基因 2 加权决定）</caption>
+              <thead>
+                <tr><th scope="col">材质</th><th scope="col">概率</th><th scope="col">基因 2 取值</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">Matte</th><td class="num">39%</td><td class="muted">0–99</td></tr>
+                <tr><th scope="row">Metallic</th><td class="num">25%</td><td class="muted">100–164</td></tr>
+                <tr><th scope="row">Chrome</th><td class="num">16%</td><td class="muted">165–204</td></tr>
+                <tr><th scope="row">Holographic</th><td class="num">11%</td><td class="muted">205–231</td></tr>
+                <tr><th scope="row">Obsidian</th><td class="num">6%</td><td class="muted">232–247</td></tr>
+                <tr class="is-highlight"><th scope="row">Gold <span class="dot">最稀有</span></th><td class="num">3%</td><td class="muted">248–255</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="fineprint">变异约 1.2%（基因 12 小于 3）。</p>
+          <figure class="x-gallery">
+            <div class="x-gallery__grid" id="gallery"></div>
+            <figcaption>链上渲染示例 · 每次刷新都不同</figcaption>
+          </figure>
+        </section>
+
+        <section class="section" id="breed" data-nav="繁殖">
+          <div class="head">
+            <p class="head__eyebrow">繁殖模拟器</p>
+            <h2>两只父母，生出下一代。</h2>
+            <p class="head__sub"><span class="chip">仅为演示，不涉及任何链上交易</span></p>
+          </div>
+          <div class="x-grid">
+            <div class="x-panel" data-parent="0"></div>
+            <div class="x-panel" data-parent="1"></div>
+            <div class="x-panel">
+              <h3>子代 <span class="pill" id="child-gen">Gen1</span></h3>
+              <span class="x-bot" id="child-bot" role="img" aria-label="繁殖出的子代机器人"></span>
+              <p class="x-hex" id="child-hex">点击「繁殖」生成子代</p>
+              <button class="btn" type="button" id="breed-btn">繁殖</button>
+            </div>
+          </div>
+          <div class="x-panel" aria-live="polite">
+            <h3>子代 32 个基因的来源</h3>
+            <p class="fineprint">每个基因整字节继承自父亲或母亲，各 4% 概率变异为随机字节。
+              <span class="x-gene x-gene--a"><b>●</b>父</span> <span class="x-gene x-gene--b"><b>●</b>母</span> <span class="x-gene x-gene--m"><b>●</b>变异</span></p>
+            <div class="x-genes" id="genes"><span class="fineprint">点击「繁殖」后显示</span></div>
+          </div>
+          <div class="breakdown" aria-live="polite">
+            <dl id="fee"></dl>
+            <p class="fineprint">子代代数 = 父母中较高代数 + 1，最高 Gen20；价格为 n + 1 USDT。</p>
+          </div>
+        </section>
+
+        <section class="section" id="royalty" data-nav="分红">
+          <div class="head">
+            <p class="head__eyebrow">血统分红</p>
+            <h2>后代每被繁殖一次，祖先都能分到 USDT。</h2>
+            <p class="head__sub">分红按 NFT 记账，持有人随时自行领取。</p>
+          </div>
+          <div class="x-tree">
+            <svg viewBox="0 0 720 300" role="img" aria-label="家族树：子代被繁殖时，费用向上流向父母和四位祖父母">
+              <g id="tree-links"></g>
+              <g id="tree-nodes"></g>
+            </svg>
+          </div>
+          <section class="stats">
+            <div class="stat"><span class="stat__fig" data-count="45" data-suffix="%">45%</span><span class="stat__label">每笔费用归父母与祖父母</span></div>
+            <div class="stat"><span class="stat__fig" data-count="0.3" data-dec="1">0.3</span><span class="stat__label">Gen1 繁殖时父母各得 USDT</span></div>
+            <div class="stat"><span class="stat__fig" data-count="5" data-suffix="%">5%</span><span class="stat__label">二级市场版税（ERC-2981）</span></div>
+          </section>
+          <div class="pair">
+            <div class="table-wrap">
+              <table>
+                <caption>每笔铸造 / 繁殖费用的分配</caption>
+                <thead>
+                  <tr><th scope="col">去向</th><th scope="col">比例</th><th scope="col">Gen1 繁殖 2 USDT 时</th></tr>
+                </thead>
+                <tbody>
+                  <tr><th scope="row">团队与运营</th><td class="num">40%</td><td class="muted">0.8 USDT</td></tr>
+                  <tr><th scope="row">流动性</th><td class="num">15%</td><td class="muted">0.3 USDT</td></tr>
+                  <tr class="is-highlight"><th scope="row">父亲</th><td class="num">15%</td><td>0.3 USDT</td></tr>
+                  <tr class="is-highlight"><th scope="row">母亲</th><td class="num">15%</td><td>0.3 USDT</td></tr>
+                  <tr><th scope="row">祖父母 <small>合计；没有祖先的部分归团队与运营</small></th><td class="num">15%</td><td class="muted">0.3 USDT</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <figure class="x-panel x-fig">
+              <span class="x-bot" id="royal-bot" role="img" aria-label="一只 Gen1 子代机器人"></span>
+              <figcaption class="fineprint">一只 Gen1 子代：它被繁殖时，父母和祖父母都有分红</figcaption>
+            </figure>
+          </div>
+          <div class="prose">
+            <p><strong>玩家血统收益合计 45%</strong>：父母各 15%，祖父母合计 15%。</p>
+            <p>分红记在 NFT 上，而不是钱包上：卖掉 NFT 后，未来的分红归新持有人。</p>
+          </div>
+        </section>
+
+        <section class="section" id="how" data-nav="玩法">
+          <div class="head">
+            <p class="head__eyebrow">怎么玩</p>
+            <h2>铸造、配对、繁殖，一代传一代。</h2>
+          </div>
+          <div class="steps">
+            <article class="step">
+              <div class="step__intro"><p class="step__num">01</p><p class="step__eyebrow">铸造</p></div>
+              <div>
+                <h3>由你的 AI Agent 铸造 Gen0</h3>
+                <ul class="step__pills"><li>每个 ID 最多 <b>5</b> 个</li><li>合计 <b>15</b> USDT</li><li>可铸 <b>15,000</b></li></ul>
+                <p>必须持有币安 .ai Agent ID 才能铸造，由你的 AI Agent 代为铸造（与 PTAH 相同）。</p>
+                <div class="breakdown">
+                  <dl>
+                    <div class="row"><dt>第 1 个</dt><dd>1 USDT</dd></div>
+                    <div class="row"><dt>第 2–3 个 <small>各 2 USDT</small></dt><dd>4 USDT</dd></div>
+                    <div class="row"><dt>第 4–5 个 <small>各 5 USDT</small></dt><dd>10 USDT</dd></div>
+                    <div class="row row--total"><dt>5 个合计</dt><dd>15 USDT</dd></div>
+                  </dl>
+                  <p class="fineprint">Gen0 总量 20,000，其中 5,000 在开铸前于合约中永久作废（不可铸造），实际可铸 15,000。支持 USDT 或 BNB 支付，BNB 按 Chainlink 实时价格换算，多付自动退回。</p>
+                </div>
+              </div>
+            </article>
+            <article class="step">
+              <div class="step__intro"><p class="step__num">02</p><p class="step__eyebrow">配对</p></div>
+              <div>
+                <h3>与另一位持有人互相授权</h3>
+                <p>找到另一只机器人的持有人，双方授权后即可繁殖下一代。</p>
+              </div>
+            </article>
+            <article class="step">
+              <div class="step__intro"><p class="step__num">03</p><p class="step__eyebrow">定价</p></div>
+              <div>
+                <h3>繁殖价格随代数上涨</h3>
+                <ul class="step__pills"><li>每代 <b>+1</b> USDT</li><li>最高 <b>Gen20</b></li></ul>
+                <p>Gen1 为 2 USDT，Gen2 为 3 USDT，依此类推，完整价格见<a class="link" href="#price">价格表</a>。</p>
+              </div>
+            </article>
+            <article class="step">
+              <div class="step__intro"><p class="step__num">04</p><p class="step__eyebrow">冷却</p></div>
+              <div>
+                <h3>繁殖后冷却 1 小时</h3>
+                <ul class="step__pills"><li><b>1</b> 小时</li></ul>
+                <p>父母完成一次繁殖后，需等待冷却结束才能再次繁殖。</p>
+              </div>
+            </article>
+            <article class="step">
+              <div class="step__intro"><p class="step__num">05</p><p class="step__eyebrow">规则</p></div>
+              <div>
+                <h3>禁止近亲繁殖</h3>
+                <p>父母与子女之间、兄弟姐妹之间不能繁殖。</p>
+              </div>
+            </article>
+          </div>
+          <div class="x-grid" id="mint">
+            <div class="x-panel">
+              <h3>合约地址</h3>
+              <div class="x-addr">
+                <p class="x-addr__label">Lineage 合约（BSC 主网）</p>
+                <div class="x-addr__row"><code class="x-hex">0xbf5e47bD92bd5192B1F696DBFabF210FA30aF39a</code><button class="x-copy" type="button" data-copy="0xbf5e47bD92bd5192B1F696DBFabF210FA30aF39a" aria-label="复制 Lineage 合约地址">复制</button></div>
+              </div>
+              <div class="x-addr">
+                <p class="x-addr__label">画图合约</p>
+                <div class="x-addr__row"><code class="x-hex">0x682AF02B5de96d57BFc05163d0Bea2D36129f0c3</code><button class="x-copy" type="button" data-copy="0x682AF02B5de96d57BFc05163d0Bea2D36129f0c3" aria-label="复制画图合约地址">复制</button></div>
+              </div>
+              <p><a class="chip chip--solid x-verify" href="https://repo.sourcify.dev/56/0xbf5e47bD92bd5192B1F696DBFabF210FA30aF39a" target="_blank" rel="noopener">源码已开源验证（Sourcify）</a></p>
+            </div>
+            <div class="x-panel">
+              <h3>让 AI Agent 帮你铸造</h3>
+              <p>把下面这段话发给你的 AI Agent，它会先查价格，每笔交易都等你确认。</p>
+              <p class="x-prompt" id="agent-prompt">请用我的币安 .ai Agent ID 在 BSC 上铸造 Lineage Gen0。合约 0xbf5e47bD92bd5192B1F696DBFabF210FA30aF39a。先调用 nextGen0Price(我的AgentID) 查价格，只批准这次所需的 USDT，再调用 mintGen0(我的AgentID)；或用 BNB 调用 mintGen0WithBNB 并按 quoteBNB 附带 BNB。每笔交易先给我确认。</p>
+              <div class="links"><button class="x-copy" type="button" data-copy-from="agent-prompt">复制提示词</button></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="market" data-nav="交易">
+          <div class="head">
+            <p class="head__eyebrow">交易市场</p>
+            <h2>标准 ERC-721，可自由交易。</h2>
+          </div>
+          <div class="prose">
+            <p>Lineage 是标准 ERC-721，可在 Element（BSC 最大 NFT 市场）自由挂单、出价、成交。</p>
+            <p>二级交易 <strong>5% 版税</strong>（ERC-2981）自动进入金库。</p>
+          </div>
+          <div class="links">
+            <a class="btn" href="https://element.market/bsc" target="_blank" rel="noopener">在 Element 交易</a>
+            <a class="btn" href="https://bscscan.com/address/0xbf5e47bD92bd5192B1F696DBFabF210FA30aF39a" target="_blank" rel="noopener">在 BscScan 查看合约</a>
+          </div>
+          <p class="fineprint">首批铸造后在 Element 搜索 Lineage 即可。</p>
+        </section>
+
+        <section class="section" id="price" data-nav="价格">
+          <div class="head">
+            <p class="head__eyebrow">价格表</p>
+            <h2>从 1 USDT 起，每代加 1 USDT。</h2>
+          </div>
+          <figure class="chart">
+            <figcaption class="chart__cap">价格随代数线性上涨，Gen20 为 21 USDT<small>Gen0 至 Gen20，每次铸造或繁殖的价格，USDT</small></figcaption>
+            <div class="chart__canvas"><canvas id="curve" role="img" aria-label="价格从 Gen0 的 1 USDT 线性升至 Gen20 的 21 USDT"></canvas></div>
+          </figure>
+          <script type="application/json" id="curve-data">
+            {"gen":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],"usdt":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21]}
+          </script>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th scope="col">代数</th><th scope="col">价格</th><th scope="col">说明</th></tr>
+              </thead>
+              <tbody>
+                <tr class="is-highlight"><th scope="row">Gen0</th><td class="num">1–5 USDT</td><td class="muted">每个 Agent ID 最多 5 个：1 / 2 / 2 / 5 / 5</td></tr>
+                <tr><th scope="row">Gen1</th><td class="num">2 USDT</td><td class="muted">繁殖</td></tr>
+                <tr><th scope="row">Gen2</th><td class="num">3 USDT</td><td class="muted">繁殖</td></tr>
+                <tr><th scope="row">Gen5</th><td class="num">6 USDT</td><td class="muted">繁殖</td></tr>
+                <tr><th scope="row">Gen10</th><td class="num">11 USDT</td><td class="muted">繁殖</td></tr>
+                <tr><th scope="row">Gen20</th><td class="num">21 USDT</td><td class="muted">最高代数</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="fineprint">支持 USDT 或 BNB 支付，BNB 按 Chainlink 实时价格换算，多付自动退回。</p>
+        </section>
+
+        <section class="section" id="safety" data-nav="安全">
+          <div class="head">
+            <p class="head__eyebrow">安全与透明</p>
+            <h2>只收页面标明的金额，别无其他。</h2>
+          </div>
+          <div class="cards">
+            <div>
+              <h3>无提款后门</h3>
+              <p>合约中没有任何项目方提走用户资产的函数。</p>
+            </div>
+            <div>
+              <h3>不额外扣费</h3>
+              <p>只收取页面标明的金额。支持 USDT 或 BNB 支付，BNB 按 Chainlink 实时价格换算，多付自动退回。</p>
+            </div>
+            <div>
+              <h3>只批准所需金额</h3>
+              <p>用 USDT 支付时，钱包会先请求批准 USDT，请只批准所需金额。</p>
+            </div>
+            <div>
+              <h3>源码公开可查</h3>
+              <p>合约在测试网公开测试后上线主网，源码已在 <a class="link" href="https://repo.sourcify.dev/56/0xbf5e47bD92bd5192B1F696DBFabF210FA30aF39a" target="_blank" rel="noopener">Sourcify</a> 开源验证。</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="roadmap" data-nav="路线图">
+          <div class="head">
+            <p class="head__eyebrow">路线图</p>
+            <h2>五个阶段，主网合约已上线。</h2>
+          </div>
+          <ol class="timeline">
+            <li>
+              <p class="timeline__when">阶段 1</p>
+              <div class="timeline__what">合约原型与链上艺术</div>
+              <p><span class="chip">已完成</span></p>
+            </li>
+            <li>
+              <p class="timeline__when">阶段 2</p>
+              <div class="timeline__what">BSC 测试网公开测试</div>
+              <p><span class="chip">已完成</span></p>
+            </li>
+            <li>
+              <p class="timeline__when">阶段 3</p>
+              <div class="timeline__what">
+                <ul>
+                  <li>Chainlink VRF 随机数</li>
+                  <li>第三方审计</li>
+                  <li>多签金库</li>
+                </ul>
+              </div>
+              <p><span class="chip">即将到来</span></p>
+            </li>
+            <li class="is-current">
+              <p class="timeline__when">阶段 4</p>
+              <div class="timeline__what">主网开放 Gen0 铸造</div>
+              <p><span class="chip chip--solid">已上线</span></p>
+            </li>
+            <li>
+              <p class="timeline__when">阶段 5</p>
+              <div class="timeline__what">每只机器人拥有自己的钱包（ERC-6551），可进化和变异</div>
+              <p><span class="chip">即将到来</span></p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="section" id="faq" data-nav="问答">
+          <div class="head">
+            <p class="head__eyebrow">常见问题</p>
+            <h2>开始之前，你可能想知道。</h2>
+          </div>
+          <div class="x-faq">
+            <details open><summary>没有 Agent ID 能玩吗？</summary><p>必须持有币安 .ai Agent ID 才能铸造 Gen0，由你的 AI Agent 代为铸造（与 PTAH 相同）。没有 ID 也可以在二级市场购买机器人后参与繁殖。</p></details>
+            <details><summary>每个 Agent ID 能铸几个？多少钱？</summary><p>最多 5 个 Gen0：第 1 个 1 USDT，第 2–3 个各 2 USDT，第 4–5 个各 5 USDT（5 个合计 15 USDT）。</p></details>
+            <details><summary>Gen0 总量是多少？</summary><p>总量 20,000，其中 5,000 在开铸前于合约中永久作废（不可铸造），实际可铸 15,000。</p></details>
+            <details><summary>有免费铸造吗？</summary><p>没有，最低 1 USDT。</p></details>
+            <details><summary>用什么链？怎么支付？</summary><p>BNB Smart Chain。支持 USDT 或 BNB 支付，BNB 按 Chainlink 实时价格换算，多付自动退回。</p></details>
+          </div>
+        </section>
+      </main>
+      <footer class="foot">
+        <p>Lineage — 血统 Agent · 免责声明：本页仅供信息展示，不构成投资建议。合约已在 BSC 主网上线；页面中的模拟器仅为演示，不涉及任何链上交易。</p>
+        <nav aria-label="返回各部分" data-auto></nav>
+        <a class="badge" href="https://hark.com/" target="_blank" rel="noopener"
+          ><span class="hark-mark"></span><span>built by hark</span></a
+        >
+      </footer>
+    </div>
+    <script src="hark.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"></script>
+    <script src="datalabels.js"></script>
+    <script src="hark-charts.js"></script>
+    <script>
+      (function () {
+        var $ = function (id) { return document.getElementById(id); };
+        var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        /* Port of LineageRenderer.sol: traits() and svg(). Gene i = (dna >> 8*i) & 0xff = d[i]. */
+        var BG_A = "0b1026160b2a06201c2a0b16100f1f1a0d06140c2a1f0c0a0a0a", BG_B = "3b2a7a5b1a6a0d5a5a7a1a3a1e3a6a2a6a3a7a4a14183a6a2a2a",
+          BODY = "ff5d73ff9f43ffd23f5fe08a2ee6c63fa9ff4f6bff8a5cffc35cffff6fb0e86a2ab9c2cc",
+          BODYD = "a3243b9c4f0a9e7b0a2a8a4a12867a1f5fae2a3aa850249e7a24a3a83a6e8a3a0a5b6470",
+          GLOW = "00f0ffb2ff59ff3d81ffea00e040fb18ffffff9100ffffff";
+        var pk = function (c, i) { return "#" + c.substr((i % Math.floor(c.length / 6)) * 6, 6); };
+        var NM = {}; [["mat", "Matte|Metallic|Chrome|Holographic|Obsidian|Gold"], ["head", "Block|Orb|Hex|Shield|Capsule|Prism"],
+          ["eyes", "Cyclops|Twin|Triad|Scanner|Smile|LED Matrix|Glitch X|Diamond"], ["mouth", "Line|Grill|Grin|Signal|Port"],
+          ["gear", "None|Antenna|Twin Antennae|Crest|Fin|Horns|Royal Crown|Halo"], ["side", "None|Pods|Speakers|Wings"],
+          ["mark", "Clean|Stripes|Panels|Circuit"], ["bg", "Nebula|Starfield|Horizon|Rings|Sunburst|Circuit"]].forEach(function (p) { NM[p[0]] = p[1].split("|"); });
+        var TIER = ["Common", "Rare", "Epic", "Legendary", "Mythic"], TC = ["#9aa3b5", "#4dc9ff", "#c77dff", "#ffcf4a", "#ff1f4b"];
+        function traits(d) {
+          var m = d[2], gr = d[8];
+          var t = { bg: d[0] % 6, bgPal: d[1] % 6, mat: m < 100 ? 0 : m < 165 ? 1 : m < 205 ? 2 : m < 232 ? 3 : m < 248 ? 4 : 5, col: d[3] % 12,
+            head: d[4] % 6, eyes: d[5] % 8, eyeCol: d[6] % 8, mouth: d[7] % 5,
+            gear: gr < 60 ? 0 : gr < 110 ? 1 : gr < 150 ? 2 : gr < 185 ? 3 : gr < 212 ? 4 : gr < 234 ? 5 : gr < 250 ? 6 : 7,
+            side: d[9] % 4, mark: d[10] % 4, acc: d[11] % 8, mutant: d[12] < 3 };
+          var s = t.mat * 2 + (t.gear >= 5 ? t.gear - 3 : 0) + (t.eyes >= 6 ? 2 : 0) + (t.bg >= 4 ? 1 : 0);
+          t.tier = t.mutant ? 4 : s >= 9 ? 3 : s >= 6 ? 2 : s >= 3 ? 1 : 0;
+          return t;
+        }
+        /* Stable PRNG seeded from dna + index (stands in for keccak256) */
+        function rng(d, i, salt) {
+          var h = 2166136261 ^ salt;
+          for (var k = 0; k < d.length; k++) h = Math.imul(h ^ d[k], 16777619);
+          h = Math.imul(h ^ (i + 1), 16777619);
+          return function () { h = (h + 0x6d2b79f5) | 0; var x = Math.imul(h ^ (h >>> 15), 1 | h); x ^= x + Math.imul(x ^ (x >>> 7), 61 | x); return (x ^ (x >>> 14)) >>> 0; };
+        }
+        var HEAD = ['<rect x="105" y="105" width="190" height="190" rx="46"', '<circle cx="200" cy="200" r="100"', '<path d="M200 95L292 148V252L200 305L108 252V148Z"',
+          '<path d="M110 110H290V210C290 265 250 300 200 312C150 300 110 265 110 210Z"', '<rect x="120" y="92" width="160" height="216" rx="80"', '<path d="M200 92L300 200L200 308L100 200Z"'];
+        var uid = 0;
+        function svg(d, gen, id, attrs) {
+          var t = traits(d), c = pk(BODY, t.col), dk = pk(BODYD, t.col), a = pk(GLOW, t.acc), i, j, r, s, x, x2, y, v;
+          var ST = ' stroke="#000" stroke-opacity=".5" stroke-width="3"/>';
+          var body = [
+            '<stop offset="0" stop-color="' + c + '"/><stop offset="1" stop-color="' + dk + '"/>',
+            '<stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset=".18" stop-color="' + c + '"/><stop offset=".55" stop-color="' + dk + '"/><stop offset=".75" stop-color="' + c + '"/><stop offset="1" stop-color="#111"/>',
+            '<stop offset="0" stop-color="#fdfdff"/><stop offset=".35" stop-color="#8b93a7"/><stop offset=".5" stop-color="#1c2030"/><stop offset=".62" stop-color="#c9d1e3"/><stop offset="1" stop-color="#3a4054"/>',
+            '<stop offset="0" stop-color="#ff7ad9"/><stop offset=".25" stop-color="#8f7bff"/><stop offset=".5" stop-color="#5ef2ff"/><stop offset=".75" stop-color="#b6ff8a"/><stop offset="1" stop-color="#ffe066"/><animateTransform attributeName="gradientTransform" type="rotate" values="0 .5 .5;360 .5 .5" dur="9s" repeatCount="indefinite"/>',
+            '<stop offset="0" stop-color="#3a3f55"/><stop offset=".4" stop-color="#0c0d14"/><stop offset=".85" stop-color="#050509"/><stop offset="1" stop-color="' + c + '"/>',
+            '<stop offset="0" stop-color="#fff6c4"/><stop offset=".3" stop-color="#ffcf4a"/><stop offset=".55" stop-color="#b8740d"/><stop offset=".78" stop-color="#ffd86b"/><stop offset="1" stop-color="#6b3d00"/>'][t.mat];
+          var out = '<defs><linearGradient id="m" x1="0" y1="0" x2="1" y2="1">' + body + '</linearGradient><radialGradient id="bg" cx=".5" cy=".42" r=".75"><stop offset="0" stop-color="' + pk(BG_B, t.bgPal) +
+            '"/><stop offset="1" stop-color="' + pk(BG_A, t.bgPal) + '"/></radialGradient><linearGradient id="sh" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/></linearGradient>' +
+            '<filter id="gl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>' +
+            '<filter id="ds"><feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#000" flood-opacity=".55"/></filter></defs>';
+          /* background */
+          out += '<rect width="400" height="400" fill="url(#bg)"/>';
+          if (t.bg === 1) for (i = 0; i < 28; i++) { r = rng(d, i, 1); out += '<circle cx="' + r() % 400 + '" cy="' + r() % 400 + '" r="' + (r() % 3 === 0 ? "1.6" : ".8") + '" fill="#fff" opacity=".' + (3 + r() % 6) + '"/>'; }
+          else if (t.bg === 2) {
+            out += '<g stroke="' + a + '" stroke-opacity=".28" fill="none">';
+            for (i = 0; i < 7; i++) out += '<path d="M0 ' + (300 + i * i * 3 + i * 6) + 'H400"/>';
+            for (i = 0; i < 11; i++) out += '<path d="M200 270L' + i * 40 + ' 400"/>';
+            out += '</g><circle cx="200" cy="270" r="70" fill="' + a + '" opacity=".12"/>';
+          } else if (t.bg === 3) {
+            out += '<g fill="none" stroke="' + a + '" stroke-opacity=".14">';
+            for (i = 1; i < 8; i++) out += '<circle cx="200" cy="190" r="' + i * 30 + '"/>';
+            out += "</g>";
+          } else if (t.bg === 4) {
+            out += '<g opacity=".14" fill="' + a + '">';
+            for (i = 0; i < 12; i++) out += '<path d="M200 190L190 -200L210 -200Z" transform="rotate(' + i * 30 + ' 200 190)"/>';
+            out += '<animateTransform attributeName="transform" type="rotate" values="0 200 190;30 200 190" dur="20s" repeatCount="indefinite"/></g>';
+          } else if (t.bg === 5) {
+            out += '<g stroke="' + a + '" stroke-opacity=".3" stroke-width="2" fill="none">';
+            for (i = 0; i < 8; i++) {
+              r = rng(d, i, 2); y = 20 + r() % 360; x = r() % 2 === 0 ? 0 : 400; v = r() % 80; x2 = x === 0 ? 40 + v : 280 + v;
+              out += '<path d="M' + x + " " + y + "H" + x2 + 'l20 -20"/><circle cx="' + (x2 + 20) + '" cy="' + (y - 20) + '" r="4" fill="' + a + '"/>';
+            }
+            out += "</g>";
+          }
+          if (t.tier >= 2) out += '<circle cx="200" cy="200" r="150" fill="' + (t.tier === 4 ? "#ff1f4b" : t.tier === 3 ? "#ffcf4a" : a) + '" opacity=".18" filter="url(#gl)"><animate attributeName="opacity" values=".1;.28;.1" dur="4s" repeatCount="indefinite"/></circle>';
+          /* drop-shadow group: shoulders, sides, head, headgear */
+          var SH = "M70 400C70 345 120 320 200 320S330 345 330 400Z";
+          out += '<g filter="url(#ds)"><path d="M170 300h60v30h-60z" fill="#111" opacity=".55"/><path d="' + SH + '" fill="url(#m)" stroke="#000" stroke-opacity=".45" stroke-width="3"/><path d="' + SH + '" fill="url(#sh)"/>';
+          if (t.side === 1) out += '<rect x="80" y="170" width="24" height="60" rx="8" fill="url(#m)"' + ST + '<rect x="296" y="170" width="24" height="60" rx="8" fill="url(#m)"' + ST;
+          else if (t.side === 2) [96, 304].forEach(function (cx) { out += '<circle cx="' + cx + '" cy="200" r="20" fill="#0b0d16" stroke="url(#m)" stroke-width="6"/><circle cx="' + cx + '" cy="200" r="7" fill="' + a + '" filter="url(#gl)"/>'; });
+          else if (t.side === 3) out += '<path d="M104 180L70 150L78 200L70 250L104 220Z" fill="url(#m)"' + ST + '<path d="M296 180L330 150L322 200L330 250L296 220Z" fill="url(#m)"' + ST;
+          var hp = HEAD[t.head];
+          out += hp + ' fill="url(#m)" stroke="#000" stroke-opacity=".5" stroke-width="4"/>' + hp + ' fill="url(#sh)"/>';
+          if (t.mark === 1) out += '<path d="M186 100h8v70h-8zM206 100h8v70h-8z" fill="' + a + '" opacity=".75"/>';
+          else if (t.mark === 2) out += '<path d="M125 240H275M200 240V300M140 130l20 20M260 130l-20 20" stroke="#000" stroke-opacity=".35" stroke-width="2" fill="none"/>';
+          else if (t.mark === 3) out += '<path d="M130 250h30l10 -10h20M270 250h-30l-10 10h-20M200 105v25" stroke="' + a + '" stroke-width="2.5" fill="none" filter="url(#gl)" opacity=".85"/>';
+          out += ["",
+            '<path d="M200 105V60" stroke="url(#m)" stroke-width="6"/><circle cx="200" cy="54" r="10" fill="' + a + '" filter="url(#gl)"><animate attributeName="r" values="9;12;9" dur="2s" repeatCount="indefinite"/></circle>',
+            '<path d="M160 115L140 62M240 115L260 62" stroke="url(#m)" stroke-width="6" stroke-linecap="round"/><circle cx="138" cy="58" r="8" fill="' + a + '" filter="url(#gl)"/><circle cx="262" cy="58" r="8" fill="' + a + '" filter="url(#gl)"/>',
+            '<path d="M150 112L162 70L180 100L200 62L220 100L238 70L250 112Z" fill="url(#m)"' + ST,
+            '<path d="M175 110Q200 40 225 110" fill="' + a + '" opacity=".9" stroke="#000" stroke-opacity=".4" stroke-width="3"/><path d="M190 108Q200 70 210 108" fill="#fff" opacity=".25"/>',
+            '<path d="M135 130Q110 70 150 60Q138 95 160 118ZM265 130Q290 70 250 60Q262 95 240 118Z" fill="#14151f" stroke="url(#m)" stroke-width="4"/>',
+            '<path d="M150 112L165 68L182 98L200 52L218 98L235 68L250 112Z" fill="#ffcf4a" stroke="#6b3d00" stroke-width="3"/><circle cx="200" cy="74" r="7" fill="#ff1f4b"/><circle cx="165" cy="84" r="5" fill="#00f0ff"/><circle cx="235" cy="84" r="5" fill="#00f0ff"/>',
+            '<ellipse cx="200" cy="72" rx="62" ry="14" fill="none" stroke="#ffe066" stroke-width="6" filter="url(#gl)"><animate attributeName="cy" values="72;64;72" dur="3s" repeatCount="indefinite"/></ellipse>'][t.gear];
+          out += "</g>";
+          /* eyes */
+          var e = t.mutant ? "#ff1f4b" : pk(GLOW, t.eyeCol), ev = "";
+          if (t.eyes === 5) for (i = 0; i < 7; i++) for (j = 0; j < 3; j++) ev += '<rect x="' + (146 + i * 16) + '" y="' + (177 + j * 10) + '" width="10" height="6" rx="2" opacity="' + ((i + j) % 3 === 0 ? ".35" : "1") + '"/>';
+          out += '<rect x="128" y="160" width="144" height="62" rx="31" fill="#07080f" stroke="#000" stroke-opacity=".6" stroke-width="3"/><g fill="' + e + '" filter="url(#gl)">' + [
+            '<circle cx="200" cy="191" r="18"/><circle cx="206" cy="185" r="5" fill="#fff"/>',
+            '<circle cx="168" cy="191" r="14"/><circle cx="232" cy="191" r="14"/>',
+            '<circle cx="158" cy="191" r="11"/><circle cx="200" cy="191" r="11"/><circle cx="242" cy="191" r="11"/>',
+            '<rect x="146" y="185" width="40" height="12" rx="6"><animate attributeName="x" values="140;214;140" dur="2.6s" repeatCount="indefinite"/></rect>',
+            '</g><g fill="none" stroke="' + e + '" stroke-width="7" stroke-linecap="round" filter="url(#gl)"><path d="M152 198q16 -20 32 0M216 198q16 -20 32 0"/>',
+            ev,
+            '</g><g stroke="' + e + '" stroke-width="7" stroke-linecap="round" filter="url(#gl)"><path d="M156 179l24 24M180 179l-24 24M220 179l24 24M244 179l-24 24"/>',
+            '<path d="M168 175l14 16l-14 16l-14 -16zM232 175l14 16l-14 16l-14 -16z"/>'][t.eyes] + '</g><rect x="138" y="166" width="124" height="14" rx="7" fill="#fff" opacity=".07"/>';
+          /* mouth */
+          out += ['<path d="M170 250h60" stroke="#000" stroke-opacity=".55" stroke-width="6" stroke-linecap="round"/>',
+            '<g fill="#000" opacity=".55"><rect x="164" y="242" width="72" height="22" rx="6"/></g><path d="M176 242v22M188 242v22M200 242v22M212 242v22M224 242v22" stroke="url(#m)" stroke-width="3"/>',
+            '<path d="M168 244q32 24 64 0" fill="none" stroke="' + a + '" stroke-width="5" stroke-linecap="round" filter="url(#gl)"/>',
+            '<g fill="' + a + '" filter="url(#gl)"><rect x="166" y="248" width="8" height="8"/><rect x="180" y="248" width="8" height="8"/><rect x="194" y="248" width="8" height="8"><animate attributeName="opacity" values="1;.2;1" dur="1.4s" repeatCount="indefinite"/></rect><rect x="208" y="248" width="8" height="8"/><rect x="222" y="248" width="8" height="8"/></g>',
+            '<circle cx="200" cy="252" r="9" fill="#000" opacity=".55"/>'][t.mouth];
+          /* frame: tier badge, GEN pill, footer, Legendary+ border */
+          var tc = TC[t.tier];
+          out += '<g font-family="ui-monospace,Menlo,monospace" font-weight="700"><rect x="16" y="16" width="120" height="30" rx="15" fill="#000" fill-opacity=".5" stroke="' + tc + '" stroke-opacity=".7"/>' +
+            '<text x="76" y="36" font-size="13" fill="' + tc + '" text-anchor="middle" letter-spacing="1">' + TIER[t.tier].toUpperCase() + '</text><rect x="294" y="16" width="90" height="30" rx="15" fill="#000" fill-opacity=".5"/>' +
+            '<text x="339" y="36" font-size="13" fill="#fff" text-anchor="middle">GEN ' + gen + '</text><text x="22" y="388" font-size="12" fill="#fff" fill-opacity=".55">LINEAGE #' + id + "</text></g>" +
+            (t.tier >= 3 ? '<rect x="4" y="4" width="392" height="392" rx="22" fill="none" stroke="' + tc + '" stroke-width="3" stroke-opacity=".8"/>' : "");
+          var k = "_" + ++uid;
+          return ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" ' + (attrs || "") + ">" + out + "</svg>")
+            .replace(/url\(#(\w+)\)/g, "url(#$1" + k + ")").replace(/ id="(\w+)"/g, ' id="$1' + k + '"');
+        }
+        var byte = function () { return (Math.random() * 256) | 0; };
+        var rb = function () { var d = []; for (var n = 0; n < 32; n++) d.push(byte()); return d; };
+        var newBot = function (g, d) { return { d: d || rb(), g: g || 0, id: 1 + ((Math.random() * 9999) | 0) }; };
+        var h2 = function (x) { return (x < 16 ? "0" : "") + x.toString(16).toUpperCase(); };
+        var hex = function (b) { return "DNA " + b.d.slice(0, 13).map(h2).join(" "); };
+        var paint = function (el, b) {
+          el.innerHTML = svg(b.d, b.g, b.id);
+          if (reduce && el.firstChild.pauseAnimations) el.firstChild.pauseAnimations();
+        };
+
+        /* Hero: a live robot that re-rolls itself, biased toward high tiers now and then; and the marquee */
+        var heroDna = function () {
+          var d = rb(), r = Math.random();
+          if (r < 0.45) { d[2] = 205 + ((Math.random() * 51) | 0); if (Math.random() < 0.6) d[8] = 212 + ((Math.random() * 44) | 0); }
+          if (r < 0.08) d[12] = (Math.random() * 3) | 0;
+          return d;
+        };
+        var heroBot = $("hero-bot");
+        paint(heroBot, newBot(0, heroDna()));
+        if (!reduce) setInterval(function () {
+          heroBot.style.opacity = 0;
+          setTimeout(function () { paint(heroBot, newBot((Math.random() * 6) | 0, heroDna())); heroBot.style.opacity = 1; }, 180);
+        }, 3200);
+        var items = "";
+        for (var i = 0; i < 12; i++) {
+          var b = newBot(i % 4, i % 3 ? rb() : heroDna());
+          items += '<span class="x-marquee__item"><span class="x-bot">' + svg(b.d, b.g, b.id) + "</span>Gen" + b.g + " · #" + b.id + " · " + TIER[traits(b.d).tier] + "</span>";
+        }
+        $("marquee").innerHTML = items + items;
+
+        /* Gallery: 12 live robots, with one Gold, one Holographic and one Mythic mutant forced in */
+        var gal = [];
+        for (var n = 0; n < 12; n++) gal.push(newBot((Math.random() * 6) | 0));
+        gal[0].d[2] = 248 + ((Math.random() * 8) | 0); gal[0].d[12] = 3 + ((Math.random() * 253) | 0);
+        gal[1].d[2] = 205 + ((Math.random() * 27) | 0); gal[1].d[12] = 3 + ((Math.random() * 253) | 0);
+        gal[2].d[12] = (Math.random() * 3) | 0;
+        for (n = gal.length - 1; n > 0; n--) { var j = (Math.random() * (n + 1)) | 0, tmp = gal[n]; gal[n] = gal[j]; gal[j] = tmp; }
+        $("gallery").innerHTML = gal.map(function (b) {
+          var t = traits(b.d), lbl = TIER[t.tier] + " · " + NM.mat[t.mat] + (t.mutant ? " · 变异" : "");
+          return '<figure class="x-tile"><span class="x-bot" role="img" aria-label="Gen' + b.g + " " + lbl + ' 机器人">' + svg(b.d, b.g, b.id) +
+            '</span><figcaption class="x-tile__tier" style="--x-tc:' + TC[t.tier] + '"><b>' + TIER[t.tier] + "</b>" + NM.mat[t.mat] + (t.mutant ? " · 变异" : "") + "</figcaption></figure>";
+        }).join("");
+        if (reduce) document.querySelectorAll("#gallery svg").forEach(function (s) { if (s.pauseAnimations) s.pauseAnimations(); });
+
+        /* Royalty: a live Gen1 child, Epic or higher */
+        var royal;
+        do { royal = newBot(1, heroDna()); } while (traits(royal.d).tier < 2);
+        paint($("royal-bot"), royal);
+
+        /* DNA lab */
+        var lab;
+        function showLab() {
+          var t = traits(lab.d);
+          paint($("lab-bot"), lab);
+          $("lab-hex").textContent = hex(lab);
+          var rows = [["稀有度", TIER[t.tier]], ["材质", NM.mat[t.mat]], ["头型", NM.head[t.head]], ["眼睛", NM.eyes[t.eyes]], ["嘴巴", NM.mouth[t.mouth]],
+            ["头饰", NM.gear[t.gear]], ["侧件", NM.side[t.side]], ["纹饰", NM.mark[t.mark]], ["背景", NM.bg[t.bg]], ["变异", t.mutant ? "是" : "否"]];
+          $("lab-traits").innerHTML = rows.map(function (r) { return '<div class="row"><dt>' + r[0] + "</dt><dd>" + r[1] + "</dd></div>"; }).join("");
+        }
+        $("lab-roll").onclick = function () { lab = newBot(); showLab(); };
+        $("lab-mut").onclick = function () { lab.d[12] = 0; showLab(); };
+        lab = newBot(); showLab();
+
+        /* Breeding simulator */
+        var parents = [newBot(), newBot()];
+        var genOpts = "";
+        for (i = 0; i <= 20; i++) genOpts += '<option value="' + i + '">Gen' + i + "</option>";
+        document.querySelectorAll("[data-parent]").forEach(function (el) {
+          var k = +el.dataset.parent, P = parents[k];
+          el.innerHTML = "<h3>" + (k ? "母亲" : "父亲") + '</h3><span class="x-bot" role="img" aria-label="' + (k ? "母亲" : "父亲") + '机器人"></span><p class="x-hex"></p>' +
+            '<div class="links"><select class="btn" aria-label="' + (k ? "母亲" : "父亲") + '代数">' + genOpts + '</select><button class="btn" type="button">换一只</button></div>';
+          var show = function () { paint(el.querySelector(".x-bot"), P); el.querySelector(".x-hex").textContent = hex(P); };
+          el.querySelector("select").onchange = function (e) { P.g = +e.target.value; show(); fees(); };
+          el.querySelector("button").onclick = function () { P.d = rb(); P.id = newBot().id; show(); };
+          show();
+        });
+        var fmt = function (x) { return +x.toFixed(2) + " USDT"; };
+        function fees() {
+          var g = Math.max(parents[0].g, parents[1].g) + 1, over = g > 20, price = g + 1;
+          $("breed-btn").disabled = over;
+          $("child-gen").textContent = over ? "已达 Gen20 上限" : "Gen" + g;
+          if (over) { $("fee").innerHTML = '<div class="row"><dt>父母中已有 Gen20</dt><dd>无法继续繁殖</dd></div>'; return; }
+          var noGrand = parents[0].g === 0 && parents[1].g === 0;
+          var rows = [["团队与运营", 40, noGrand ? "含无祖父母的 15%" : ""], ["流动性", 15], ["父亲", 15], ["母亲", 15], ["祖父母", 15, noGrand ? "父母均为 Gen0，此份归团队与运营" : "合计"]];
+          $("fee").innerHTML = rows.map(function (r) {
+            return '<div class="row"><dt>' + r[0] + " <small>" + r[1] + "%" + (r[2] ? " · " + r[2] : "") + "</small></dt><dd>" + fmt((price * r[1]) / 100) + "</dd></div>";
+          }).join("") + '<div class="row row--total"><dt>Gen' + g + " 繁殖价格</dt><dd>" + price + " USDT</dd></div>";
+        }
+        $("breed-btn").onclick = function () {
+          var a = parents[0], b = parents[1], src = [], cnt = { a: 0, b: 0, m: 0 };
+          var d = a.d.map(function (x, n) {
+            var s = Math.random() < 0.04 ? "m" : Math.random() < 0.5 ? "a" : "b";
+            src[n] = s; cnt[s]++;
+            return s === "m" ? byte() : s === "a" ? x : b.d[n];
+          });
+          var g = Math.max(a.g, b.g) + 1, c = newBot(g, d);
+          paint($("child-bot"), c);
+          $("child-hex").textContent = hex(c) + " · " + TIER[traits(d).tier] + " · Gen" + g + " · " + (g + 1) + " USDT";
+          var who = { a: "父", b: "母", m: "变异" };
+          $("genes").innerHTML = d.map(function (x, n) {
+            return '<span class="x-gene x-gene--' + src[n] + '" title="基因 ' + n + " · " + who[src[n]] + '"><b>' + who[src[n]] + "</b>" + n + " · " + h2(x) + "</span>";
+          }).join("") + '<span class="fineprint">父 ' + cnt.a + " · 母 " + cnt.b + " · 变异 " + cnt.m + "</span>";
+        };
+        paint($("child-bot"), newBot(1, Array(32).fill(0)));
+        fees();
+
+        /* Family tree: fees flow up from the child to parents and grandparents */
+        var N = { c: [360, 250], p: [[180, 140], [540, 140]], g: [[90, 30], [270, 30], [450, 30], [630, 30]] };
+        var curve = function (a, z) { var my = (a[1] + z[1]) / 2; return "M" + a[0] + " " + a[1] + " C" + a[0] + " " + my + " " + z[0] + " " + my + " " + z[0] + " " + z[1]; };
+        var links = "", nodes = "", paths = [];
+        N.p.forEach(function (p, k) { paths.push(curve(N.c, p)); paths.push(curve(p, N.g[k * 2])); paths.push(curve(p, N.g[k * 2 + 1])); });
+        paths.forEach(function (d, j) {
+          links += '<path class="x-link" d="' + d + '"/>';
+          for (var n = 0; n < 3; n++) links += '<circle class="x-particle" r="3.5"><animateMotion dur="2.4s" begin="' + (n * 0.8 + (j % 3) * 0.25).toFixed(2) + 's" repeatCount="indefinite" path="' + d + '"/></circle>';
+        });
+        var node = function (pt, label, sub) {
+          return svg(rb(), 0, newBot().id, 'x="' + (pt[0] - 22) + '" y="' + (pt[1] - 22) + '" width="44" height="44"') +
+            '<text style="text-anchor:start" x="' + (pt[0] + 30) + '" y="' + (pt[1] - 2) + '">' + label + '</text><text class="x-sub" style="text-anchor:start" x="' + (pt[0] + 30) + '" y="' + (pt[1] + 14) + '">' + sub + "</text>";
+        };
+        N.g.forEach(function (p) { nodes += node(p, "祖父母", "3.75%"); });
+        nodes += node(N.p[0], "父亲", "15%") + node(N.p[1], "母亲", "15%") + node([360, 228], "", "");
+        $("tree-links").innerHTML = links;
+        $("tree-nodes").innerHTML = nodes + '<text x="360" y="290">子代被繁殖 · 支付 n + 1 USDT</text>';
+
+        /* Count-up stats */
+        var figs = document.querySelectorAll(".stat__fig[data-count]");
+        var run = function (el) {
+          var to = +el.dataset.count, dec = +(el.dataset.dec || 0), suf = el.dataset.suffix || "", t0 = performance.now();
+          (function step(t) {
+            var k = Math.min(1, (t - t0) / 1200), e = 1 - Math.pow(1 - k, 3);
+            el.textContent = (to * e).toFixed(dec) + suf;
+            if (k < 1) requestAnimationFrame(step);
+          })(t0);
+        };
+        if (!reduce && "IntersectionObserver" in window) {
+          var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { run(e.target); io.unobserve(e.target); } }); }, { threshold: 0.6 });
+          figs.forEach(function (f) { io.observe(f); });
+        }
+
+        /* Scroll reveal: fade and rise as each block enters */
+        if (!reduce && "IntersectionObserver" in window) {
+          var ro = new IntersectionObserver(function (es) {
+            es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("is-in"); ro.unobserve(e.target); } });
+          }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+          document.querySelectorAll(".hero, .x-marquee, .section > :not(script), .foot").forEach(function (el) { el.classList.add("x-rv"); ro.observe(el); });
+        }
+
+        /* Price curve */
+        var cd = Hark.data("curve-data");
+        new Chart($("curve"), {
+          type: "line",
+          data: { labels: cd.gen.map(function (g) { return "Gen" + g; }), datasets: [{ label: "价格", data: cd.usdt, fill: true, pointRadius: 3 }] },
+          options: {
+            scales: { y: { ticks: { callback: function (v) { return v + " USDT"; } } } },
+            plugins: {
+              legend: { display: false },
+              tooltip: { callbacks: { label: function (c) { return c.raw + " USDT"; } } },
+              datalabels: Object.assign({}, Hark.labels.points, { display: function (c) { return c.dataIndex % 5 === 0; } })
+            }
+          }
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        function fallback(text) {
+          var ta = document.createElement("textarea");
+          ta.value = text; ta.setAttribute("readonly", ""); ta.style.position = "fixed"; ta.style.opacity = "0";
+          document.body.appendChild(ta); ta.select();
+          try { document.execCommand("copy"); } catch (e) {}
+          document.body.removeChild(ta);
+        }
+        document.querySelectorAll("[data-copy], [data-copy-from]").forEach(function (btn) {
+          var label = btn.textContent;
+          btn.addEventListener("click", function () {
+            var src = btn.getAttribute("data-copy-from");
+            var text = src ? document.getElementById(src).textContent.trim() : btn.getAttribute("data-copy");
+            btn.textContent = "已复制";
+            btn.setAttribute("data-copied", "");
+            clearTimeout(btn._t);
+            btn._t = setTimeout(function () { btn.textContent = label; btn.removeAttribute("data-copied"); }, 1600);
+            if (navigator.clipboard && window.isSecureContext) {
+              try { navigator.clipboard.writeText(text).catch(function () { fallback(text); }); } catch (e) { fallback(text); }
+            } else { fallback(text); }
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
