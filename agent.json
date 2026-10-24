@@ -13,6 +13,7 @@
   "mint": {
     "maxPerAgentId": 5,
     "pricesUSDT": [1, 2, 2, 5, 5],
+    "firstMintFree": "First Gen0 per wallet is free: pay 1 USDT on-chain, the project treasury refunds 1 USDT afterwards.",
     "priceFunction": "nextGen0Price(uint256 agentTokenId) view returns (uint256)",
     "payWithUSDT": {"approve": "USDT.approve(lineage, price)", "call": "mintGen0(uint256 agentTokenId)"},
     "payWithBNB": {"quote": "quoteBNB(uint256 usd18) view returns (uint256)", "call": "mintGen0WithBNB(uint256 agentTokenId) payable"},
