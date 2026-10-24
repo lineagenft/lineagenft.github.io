@@ -965,7 +965,7 @@
     </script>
   <script>
 (function(){var el=document.getElementById("mint-label"),f=document.getElementById("mint-fill"),b=document.getElementById("mint-bar");
-function upd(){fetch("https://bsc-dataseed.bnbchain.org",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({jsonrpc:"2.0",id:1,method:"eth_call",params:[{to:"0xbf5e47bD92bd5192B1F696DBFabF210FA30aF39a",data:"0x799bc111"},"latest"]})}).then(function(r){return r.json()}).then(function(j){if(!j.result)return;var n=parseInt(j.result,16);var t=5000+n;el.setAttribute("data-n",t);el.textContent=((document.documentElement.lang=="en")?"Burned + minted ":"已销毁 + 已铸造 ")+t.toLocaleString("en-US")+" / 20,000";f.style.width=(t/200)+"%";b.setAttribute("aria-valuenow",t)}).catch(function(){})}
+var RPCS=["https://bsc-dataseed.bnbchain.org","https://bsc-rpc.publicnode.com","https://bsc-dataseed1.binance.org","https://bsc.drpc.org"];function call(i){if(i>=RPCS.length)return Promise.reject();return fetch(RPCS[i],{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({jsonrpc:"2.0",id:1,method:"eth_call",params:[{to:"0xbf5e47bD92bd5192B1F696DBFabF210FA30aF39a",data:"0x799bc111"},"latest"]})}).then(function(r){return r.json()}).then(function(j){if(!j.result)throw 0;return j}).catch(function(){return call(i+1)})}function upd(){call(0).then(function(j){if(!j.result)return;var n=parseInt(j.result,16);var t=5000+n;el.setAttribute("data-n",t);el.textContent=((document.documentElement.lang=="en")?"Burned + minted ":"已销毁 + 已铸造 ")+t.toLocaleString("en-US")+" / 20,000";f.style.width=(t/200)+"%";b.setAttribute("aria-valuenow",t)}).catch(function(){})}
 upd();setInterval(upd,30000)})();
 </script>
   <script src="lang.js"></script>
