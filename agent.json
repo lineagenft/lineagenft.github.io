@@ -1,0 +1,27 @@
+{
+  "name": "Lineage",
+  "description": "Bloodline Agent NFT on BNB Chain. Gen0 mint requires a Binance .ai Agent ID. 100% on-chain SVG art.",
+  "chain": {"name": "BNB Smart Chain", "chainId": 56},
+  "standard": "ERC-721",
+  "symbol": "LINE",
+  "requirement": {"type": "erc721_holder", "name": "Binance .ai Agent ID", "contract": "0x60B9262456dE011F7d15a54CdD8c48bAaa8B022F"},
+  "contracts": {
+    "lineage": "0xbf5e47bD92bd5192B1F696DBFabF210FA30aF39a",
+    "renderer": "0x682AF02B5de96d57BFc05163d0Bea2D36129f0c3",
+    "usdt": "0x55d398326f99059fF775485246999027B3197955"
+  },
+  "mint": {
+    "maxPerAgentId": 5,
+    "pricesUSDT": [1, 2, 2, 5, 5],
+    "priceFunction": "nextGen0Price(uint256 agentTokenId) view returns (uint256)",
+    "payWithUSDT": {"approve": "USDT.approve(lineage, price)", "call": "mintGen0(uint256 agentTokenId)"},
+    "payWithBNB": {"quote": "quoteBNB(uint256 usd18) view returns (uint256)", "call": "mintGen0WithBNB(uint256 agentTokenId) payable"},
+    "callerMustBeEOA": true,
+    "confirmEachTxWithUser": true
+  },
+  "supply": {"gen0Total": 20000, "gen0Voided": 5000, "gen0Mintable": 15000, "liveCount": "gen0Minted()"},
+  "agentSkill": "https://github.com/binance/binance-skills-hub/tree/main/skills/binance-web3/binance-agentic-wallet",
+  "verified": ["bscscan", "sourcify"],
+  "audited": false,
+  "links": {"site": "https://lineagenft.github.io", "x": "https://x.com/LineageAgent", "llms": "https://lineagenft.github.io/llms.txt"}
+}
