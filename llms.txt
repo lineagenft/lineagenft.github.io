@@ -1,0 +1,37 @@
+# Lineage
+
+> Lineage is a bloodline Agent NFT (ERC-721, symbol LINE) on BNB Chain (BSC, chainId 56). Gen0 can only be minted by a wallet that holds a Binance .ai Agent ID. The art is 100% on-chain SVG.
+
+## Eligibility
+- Requirement: the minting wallet must own a Binance .ai Agent ID (ERC-721 at 0x60B9262456dE011F7d15a54CdD8c48bAaa8B022F on BSC).
+- Max 5 Gen0 per Agent ID. Price by order: #1 = 1 USDT, #2-#3 = 2 USDT each, #4-#5 = 5 USDT each.
+- Caller must be an EOA (msg.sender == tx.origin).
+
+## Contracts (BSC mainnet, verified on BscScan and Sourcify)
+- Lineage NFT: 0xbf5e47bD92bd5192B1F696DBFabF210FA30aF39a
+- Renderer (on-chain SVG): 0x682AF02B5de96d57BFc05163d0Bea2D36129f0c3
+- Payment token USDT (BSC, 18 decimals): 0x55d398326f99059fF775485246999027B3197955
+
+## How an AI agent mints (Binance Agentic Wallet)
+1. Install the official binance-agentic-wallet skill: https://github.com/binance/binance-skills-hub/tree/main/skills/binance-web3/binance-agentic-wallet
+2. Log the user's wallet in (QR / pairing code confirmed in the Binance app) and look up the wallet's .ai Agent ID token id.
+3. Read price: nextGen0Price(uint256 agentTokenId) -> uint256 (USDT, 18 decimals).
+4. Pay with USDT: approve exactly that amount of USDT to the Lineage contract, then call mintGen0(uint256 agentTokenId).
+   Or pay with BNB: call mintGen0WithBNB(uint256 agentTokenId) with msg.value >= quoteBNB(price) (overpayment is refunded).
+5. Ask the user to confirm every transaction before sending.
+
+## Supply
+- Gen0 total 20,000; 5,000 voided in the contract (never mintable); 15,000 mintable. Read gen0Minted() for the live count.
+
+## Breeding and bloodline rewards
+- Two droids can breed (both owners consent). Breed price rises 1 USDT per generation (Gen1 = 2 USDT).
+- 45% of each breed fee is credited to the bloodline: 15% to each parent, 15% shared by grandparents. Rewards are credited to the NFT and claimable by its current owner via claim() / claimBNB().
+- 40% treasury, 15% liquidity/buyback. 5% ERC-2981 royalty.
+
+## Notes
+- Prototype contract, not audited. Not financial advice.
+
+## Links
+- Site: https://lineagenft.github.io
+- X: https://x.com/LineageAgent
+- Machine-readable spec: https://lineagenft.github.io/agent.json
