@@ -23,5 +23,5 @@
   "agentSkill": "https://github.com/binance/binance-skills-hub/tree/main/skills/binance-web3/binance-agentic-wallet",
   "verified": ["bscscan", "sourcify"],
   "audited": false,
-  "links": {"site": "https://lineagenft.github.io", "x": "https://x.com/LineageAgent", "llms": "https://lineagenft.github.io/llms.txt"}
+  "links": {"marketplace": "https://element.market/collections/lineagenft", "site": "https://lineagenft.github.io", "x": "https://x.com/LineageAgent", "llms": "https://lineagenft.github.io/llms.txt"}
 }
