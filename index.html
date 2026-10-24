@@ -263,7 +263,7 @@
             <p class="hero__meta">每 ID 最多 5 个 · 合计 15 USDT · 可铸 15,000 · 最高 Gen20</p>
           </div>
           <aside class="callout" aria-label="下一步">
-            <p class="callout__head"><span class="hark-mark" data-size="16"></span> 下一步</p>
+            <p class="callout__head">下一步</p>
             <span class="x-bot x-live" id="hero-bot" role="img" aria-label="实时生成的 Lineage 机器人"></span>
             <p class="callout__lead"><strong>合约已在 BSC 主网上线</strong> · 由你的 AI Agent 铸造</p>
             <div class="x-addr">
@@ -273,11 +273,11 @@
               <p><a class="chip chip--solid x-verify" href="https://repo.sourcify.dev/56/0xbf5e47bD92bd5192B1F696DBFabF210FA30aF39a" target="_blank" rel="noopener">源码已开源验证（Sourcify）</a></p>
             </div>
             <div class="x-prog">
-              <p class="x-prog__label">已铸造 0 / 15,000</p>
-              <div class="x-prog__bar" role="progressbar" aria-label="Gen0 铸造进度" aria-valuemin="0" aria-valuemax="15000" aria-valuenow="0"><span class="x-prog__fill" style="width: 0%"></span></div>
-              <p class="fineprint">另 5,000 已销毁（合约写死，永不铸造）</p>
+              <p class="x-prog__label" id="mint-label">已铸造 1 / 15,000</p>
+              <div class="x-prog__bar" role="progressbar" aria-label="Gen0 铸造进度" aria-valuemin="0" aria-valuemax="15000" aria-valuenow="1" id="mint-bar"><span class="x-prog__fill" id="mint-fill" style="width: 0.5%"></span></div>
             </div>
             <a class="btn" href="#mint">铸造 Gen0 · 1 USDT 起</a>
+            <p><a class="link" href="https://x.com/LineageAgent" target="_blank" rel="noopener">𝕏 关注 @LineageAgent 获取最新消息</a></p>
           </aside>
           <p class="hero__credit">图：Mythic、Legendary、Mythic、Rare 四只链上渲染</p>
         </section>
@@ -494,8 +494,8 @@
             </div>
             <div class="x-panel">
               <h3>让 AI Agent 帮你铸造</h3>
-              <p>把下面这段话发给你的 AI Agent，它会先查价格，每笔交易都等你确认。</p>
-              <p class="x-prompt" id="agent-prompt">请用我的币安 .ai Agent ID 在 BSC 上铸造 Lineage Gen0。合约 0xbf5e47bD92bd5192B1F696DBFabF210FA30aF39a。先调用 nextGen0Price(我的AgentID) 查价格，只批准这次所需的 USDT，再调用 mintGen0(我的AgentID)；或用 BNB 调用 mintGen0WithBNB 并按 quoteBNB 附带 BNB。每笔交易先给我确认。</p>
+              <p>把下面这段话发给你的 AI Agent（Claude、ChatGPT、Hark 等能运行技能的 Agent 都可以），它会先装好币安钱包技能、扫码登录，再查价格铸造，每笔交易都等你确认。</p>
+              <p class="x-prompt" id="agent-prompt">请安装币安官方 binance-agentic-wallet Skill 及其要求的钱包工具，先阅读官方说明：https://github.com/binance/binance-skills-hub/tree/main/skills/binance-web3/binance-agentic-wallet 。生成钱包登录二维码或链接及配对码，等我用币安 App 扫码确认后完成登录，并查询我这个地址的 .ai Agent ID。然后在 BSC 上铸造 Lineage Gen0，合约 0xbf5e47bD92bd5192B1F696DBFabF210FA30aF39a：先调用 nextGen0Price(我的AgentID) 查价格，只批准这次所需的 USDT，再调用 mintGen0(我的AgentID)；或用 BNB 调用 mintGen0WithBNB 并按 quoteBNB 附带 BNB。每笔交易先给我确认。</p>
               <div class="links"><button class="x-copy" type="button" data-copy-from="agent-prompt">复制提示词</button></div>
             </div>
           </div>
@@ -629,9 +629,7 @@
       <footer class="foot">
         <p>Lineage — 血统 Agent · 免责声明：本页仅供信息展示，不构成投资建议。合约已在 BSC 主网上线；页面中的模拟器仅为演示，不涉及任何链上交易。</p>
         <nav aria-label="返回各部分" data-auto></nav>
-        <a class="badge" href="https://hark.com/" target="_blank" rel="noopener"
-          ><span class="hark-mark"></span><span>built by hark</span></a
-        >
+        <p><a class="link" href="https://x.com/LineageAgent" target="_blank" rel="noopener">𝕏 关注 @LineageAgent</a></p>
       </footer>
     </div>
     <script src="hark.js"></script>
@@ -948,5 +946,10 @@
         });
       })();
     </script>
+  <script>
+(function(){var el=document.getElementById("mint-label"),f=document.getElementById("mint-fill"),b=document.getElementById("mint-bar");
+function upd(){fetch("https://bsc-dataseed.bnbchain.org",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({jsonrpc:"2.0",id:1,method:"eth_call",params:[{to:"0xbf5e47bD92bd5192B1F696DBFabF210FA30aF39a",data:"0x799bc111"},"latest"]})}).then(function(r){return r.json()}).then(function(j){if(!j.result)return;var n=parseInt(j.result,16);el.textContent="已铸造 "+n.toLocaleString("en-US")+" / 15,000";f.style.width=Math.max(0.5,n/150)+"%";b.setAttribute("aria-valuenow",n)}).catch(function(){})}
+upd();setInterval(upd,30000)})();
+</script>
   </body>
 </html>
