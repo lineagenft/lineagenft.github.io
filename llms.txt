@@ -4,7 +4,7 @@
 
 ## Eligibility
 - Requirement: the minting wallet must own a Binance .ai Agent ID (ERC-721 at 0x60B9262456dE011F7d15a54CdD8c48bAaa8B022F on BSC).
-- Max 5 Gen0 per Agent ID. Price by order: #1 = 1 USDT, #2-#3 = 2 USDT each, #4-#5 = 5 USDT each.
+- Max 5 Gen0 per Agent ID. Price by order: #1 = 1 USDT (FREE: the project treasury refunds 1 USDT to the minting wallet after the first mint, one refund per wallet), #2-#3 = 2 USDT each, #4-#5 = 5 USDT each.
 - Caller must be an EOA (msg.sender == tx.origin).
 
 ## Contracts (BSC mainnet, verified on BscScan and Sourcify)
