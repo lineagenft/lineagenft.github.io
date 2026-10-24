@@ -33,5 +33,6 @@
 
 ## Links
 - Site: https://lineagenft.github.io
+- Marketplace (Element, BNB Chain): https://element.market/collections/lineagenft
 - X: https://x.com/LineageAgent
 - Machine-readable spec: https://lineagenft.github.io/agent.json
