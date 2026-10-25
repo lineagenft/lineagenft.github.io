@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -261,97 +261,97 @@
         .x-rv { opacity: 1; transform: none; transition: none; }
         .btn, .btn:hover { transition: none; transform: none; }
       }
-    .x-lang{position:fixed;top:14px;right:16px;z-index:1000;padding:7px 14px;border-radius:999px;border:1px solid rgb(255 255 255/.18);background:rgb(12 12 20/.72);backdrop-filter:blur(8px);color:#fff;font:600 13px/1 system-ui,sans-serif;cursor:pointer;letter-spacing:.04em}.x-lang:hover{background:rgb(40 40 60/.85)}
+    .x-lang{position:fixed;top:14px;right:16px;z-index:1000;padding:7px 14px;border-radius:999px;border:1px solid rgb(255 255 255/.18);background:rgb(12 12 20/.72);backdrop-filter:blur(8px);color:#fff;font:600 13px/1 system-ui,sans-serif;cursor:pointer;letter-spacing:.04em}.x-lang{text-decoration:none}.x-lang:hover{background:rgb(40 40 60/.85)}
     </style>
   </head>
   <body>
-    <button class="x-lang" id="x-lang" type="button">中文</button>
+    <a class="x-lang" id="x-lang" href="/zh.html" lang="zh-CN" hreflang="zh-CN">中文</a>
     <div class="page" id="top">
       <header class="nav glass" data-auto></header>
       <main class="main">
         <section class="hero">
-          <img class="hero__img" src="showcase.jpg" alt="四只新版 Lineage 机器人：Mythic 金色王冠、Legendary 全息光环、Mythic 黑曜石变异、Rare 铬合金" />
+          <img class="hero__img" src="showcase.jpg" alt="Four new Lineage droids: Mythic gold crown, Legendary holo halo, Mythic obsidian mutant, Rare chrome" />
           <div class="hero__copy">
-            <p class="hero__eyebrow">BNB Smart Chain · .ai Agent ID 持有人专属</p>
-            <h1><span class="x-grad">Lineage</span><span class="x-h1sub">— 血统 Agent</span></h1>
+            <p class="hero__eyebrow">BNB Smart Chain · For .ai Agent ID holders only</p>
+            <h1><span class="x-grad">Lineage</span><span class="x-h1sub">— Bloodline Agents</span></h1>
             <p class="hero__sub">
-              必须持有币安 .ai Agent ID 才能铸造，由你的 AI Agent 代为铸造（与 PTAH 相同）。每个 Agent ID 最多铸造 5 个 Gen0，第 1 个免费（铸造时先付 1 USDT，之后由项目金库退还 1 USDT 到铸造钱包）。两只机器人可繁殖下一代，后代每次被繁殖，父母和祖父母都能分到 USDT。
+              You need a Binance .ai Agent ID to mint, and your AI Agent mints for you (same as PTAH). Each Agent ID can mint up to 5 Gen0, and the first one is free (you pay 1 USDT at mint, then the project treasury refunds 1 USDT to the minting wallet). Two droids can breed the next generation, and every time an offspring is bred, its parents and grandparents earn USDT.
             </p>
-            <p class="hero__meta">每 ID 最多 5 个 · 合计 15 USDT · 可铸 15,000 · 最高 Gen20</p>
+            <p class="hero__meta">Max 5 per ID · 15 USDT total · 15,000 mintable · Up to Gen20</p>
           </div>
-          <aside class="callout" aria-label="下一步">
-            <p class="callout__head">下一步</p>
-            <span class="x-bot x-live" id="hero-bot" role="img" aria-label="实时生成的 Lineage 机器人"></span>
-            <p class="callout__lead"><strong>合约已在 BSC 主网上线</strong> · 由你的 AI Agent 铸造</p>
+          <aside class="callout" aria-label="Next step">
+            <p class="callout__head">Next step</p>
+            <span class="x-bot x-live" id="hero-bot" role="img" aria-label="Live-generated Lineage droid"></span>
+            <p class="callout__lead"><strong>Contract live on BSC mainnet</strong> · Minted by your AI Agent</p>
             <div class="x-addr">
-              <p class="x-addr__label">Lineage 合约（BSC 主网）</p>
-              <div class="x-addr__row"><code class="x-hex">0xbf5e47bD92bd5192B1F696DBFabF210FA30aF39a</code><button class="x-copy" type="button" data-copy="0xbf5e47bD92bd5192B1F696DBFabF210FA30aF39a" aria-label="复制 Lineage 合约地址">复制</button></div>
-              <p class="fineprint">画图合约 <code class="x-hex">0x682AF02B5de96d57BFc05163d0Bea2D36129f0c3</code></p>
-              <p><a class="chip chip--solid x-verify" href="https://repo.sourcify.dev/56/0xbf5e47bD92bd5192B1F696DBFabF210FA30aF39a" target="_blank" rel="noopener">源码已开源验证（Sourcify）</a></p>
+              <p class="x-addr__label">Lineage contract (BSC mainnet)</p>
+              <div class="x-addr__row"><code class="x-hex">0xbf5e47bD92bd5192B1F696DBFabF210FA30aF39a</code><button class="x-copy" type="button" data-copy="0xbf5e47bD92bd5192B1F696DBFabF210FA30aF39a" aria-label="Copy Lineage contract address">Copy</button></div>
+              <p class="fineprint">Renderer contract <code class="x-hex">0x682AF02B5de96d57BFc05163d0Bea2D36129f0c3</code></p>
+              <p><a class="chip chip--solid x-verify" href="https://repo.sourcify.dev/56/0xbf5e47bD92bd5192B1F696DBFabF210FA30aF39a" target="_blank" rel="noopener">Source code verified (Sourcify)</a></p>
             </div>
             <div class="x-prog">
-              <p class="x-prog__label" id="mint-label">已销毁 + 已铸造 5,001 / 20,000</p>
-              <div class="x-prog__bar" role="progressbar" aria-label="Gen0 铸造进度" aria-valuemin="0" aria-valuemax="20000" aria-valuenow="5001" id="mint-bar"><span class="x-prog__fill" id="mint-fill" style="width: 25%"></span></div>
+              <p class="x-prog__label" id="mint-label">Burned + minted 5,001 / 20,000</p>
+              <div class="x-prog__bar" role="progressbar" aria-label="Gen0 mint progress" aria-valuemin="0" aria-valuemax="20000" aria-valuenow="5001" id="mint-bar"><span class="x-prog__fill" id="mint-fill" style="width: 25%"></span></div>
             </div>
-            <a class="btn" href="#mint">第 1 个免费 · 铸造 Gen0</a>
-            <p><a class="link" href="https://element.market/collections/lineagenft" target="_blank" rel="noopener">在 Element 查看 Lineage 合集</a> · <a class="link" href="https://x.com/LineageAgent" target="_blank" rel="noopener">𝕏 关注 @LineageAgent 获取最新消息</a></p>
+            <a class="btn" href="#mint">First one free · Mint Gen0</a>
+            <p><a class="link" href="https://element.market/collections/lineagenft" target="_blank" rel="noopener">View the Lineage collection on Element</a> · <a class="link" href="https://x.com/LineageAgent" target="_blank" rel="noopener">𝕏 Follow @LineageAgent for updates</a></p>
           </aside>
-          <p class="hero__credit">图：Mythic、Legendary、Mythic、Rare 四只链上渲染</p>
+          <p class="hero__credit">Pictured: Mythic, Legendary, Mythic and Rare, all rendered on-chain</p>
         </section>
         <div class="x-marquee" aria-hidden="true"><div class="x-marquee__track" id="marquee"></div></div>
 
-        <section class="section" id="mythic" data-nav="典藏">
+        <section class="section" id="mythic" data-nav="Mythic">
           <div class="head">
-            <h2>神话级 Mythic 典藏</h2>
-            <p class="head__sub">Lineage 最高稀有度的视觉方向</p>
+            <h2>The Mythic collection</h2>
+            <p class="head__sub">The look of Lineage’s highest rarity tier</p>
           </div>
           <div class="x-show">
             <figure>
-              <img src="mythic_angel.jpg" alt="全息天使 Holographic Angel 机器人" />
-              <figcaption>全息天使 Holographic Angel · 神话级</figcaption>
+              <img src="mythic_angel.jpg" alt="Holographic Angel droid" />
+              <figcaption>Holographic Angel · Mythic</figcaption>
             </figure>
             <figure>
-              <img src="mythic_devil.jpg" alt="黑曜恶魔 Obsidian Devil 机器人" />
-              <figcaption>黑曜恶魔 Obsidian Devil · 神话级</figcaption>
+              <img src="mythic_devil.jpg" alt="Obsidian Devil droid" />
+              <figcaption>Obsidian Devil · Mythic</figcaption>
             </figure>
           </div>
         </section>
 
-        <section class="section" id="about" data-nav="简介">
+        <section class="section" id="about" data-nav="About">
           <div class="head">
-            <p class="head__eyebrow">什么是 Lineage</p>
-            <h2>每只机器人都是链上生成的动态艺术。</h2>
+            <p class="head__eyebrow">What is Lineage</p>
+            <h2>Every droid is living art generated on-chain.</h2>
           </div>
           <div class="prose">
-            <p>Lineage 是 BNB Chain 上的血统 Agent NFT。外观由 13 个基因字节决定：6 种材质（黄金仅 3%）、8 种眼睛、8 种头饰（王冠与光环最稀有）、6 种背景，组合出 Common、Rare、Epic、Legendary、Mythic 五档稀有度。</p>
-            <p>图像是动态 SVG：全息流光、扫描眼、天线脉冲、悬浮光环，全部由合约在链上生成。渲染合约可被永久冻结，艺术从此不再改动。</p>
+            <p>Lineage is a bloodline Agent NFT on BNB Chain. Each droid’s look is set by 13 gene bytes: 6 materials (Gold is just 3%), 8 eye types, 8 headpieces (crowns and halos are the rarest) and 6 backgrounds, which combine into five rarity tiers: Common, Rare, Epic, Legendary and Mythic.</p>
+            <p>The images are animated SVGs: holographic shimmer, scanning eyes, pulsing antennae, floating halos, all generated on-chain by the contract. The renderer contract can be frozen permanently, after which the art can never change.</p>
           </div>
         </section>
 
-        <section class="section" id="dna" data-nav="DNA 实验室">
+        <section class="section" id="dna" data-nav="DNA Lab">
           <div class="head">
-            <p class="head__eyebrow">DNA 实验室</p>
-            <h2>一串 DNA，决定一只机器人的全部外观。</h2>
-            <p class="head__sub">图像由链上 SVG 生成，没有外部服务器。</p>
+            <p class="head__eyebrow">DNA Lab</p>
+            <h2>One DNA string decides everything about how a droid looks.</h2>
+            <p class="head__sub">Images are generated as on-chain SVG, with no external servers.</p>
           </div>
           <div class="x-grid">
             <div class="x-panel">
-              <span class="x-bot" id="lab-bot" role="img" aria-label="DNA 实验室生成的机器人"></span>
+              <span class="x-bot" id="lab-bot" role="img" aria-label="Droid generated in the DNA Lab"></span>
               <p class="x-hex" id="lab-hex"></p>
               <div class="links">
-                <button class="btn" type="button" id="lab-roll">随机生成</button>
-                <button class="btn" type="button" id="lab-mut">强制变异</button>
+                <button class="btn" type="button" id="lab-roll">Randomize</button>
+                <button class="btn" type="button" id="lab-mut">Force mutation</button>
               </div>
             </div>
             <div class="breakdown" aria-live="polite"><dl id="lab-traits"></dl>
-              <p class="fineprint">强制变异把基因 12 设为 0：眼睛变红、红色光晕，直接定为 Mythic。</p>
+              <p class="fineprint">Force mutation sets gene 12 to 0: red eyes, a red glow, and an instant Mythic.</p>
             </div>
           </div>
           <div class="table-wrap">
             <table>
-              <caption>材质出现概率（由基因 2 加权决定）</caption>
+              <caption>Material odds (weighted by gene 2)</caption>
               <thead>
-                <tr><th scope="col">材质</th><th scope="col">概率</th><th scope="col">基因 2 取值</th></tr>
+                <tr><th scope="col">Material</th><th scope="col">Odds</th><th scope="col">Gene 2 value</th></tr>
               </thead>
               <tbody>
                 <tr><th scope="row">Matte</th><td class="num">39%</td><td class="muted">0–99</td></tr>
@@ -359,189 +359,189 @@
                 <tr><th scope="row">Chrome</th><td class="num">16%</td><td class="muted">165–204</td></tr>
                 <tr><th scope="row">Holographic</th><td class="num">11%</td><td class="muted">205–231</td></tr>
                 <tr><th scope="row">Obsidian</th><td class="num">6%</td><td class="muted">232–247</td></tr>
-                <tr class="is-highlight"><th scope="row">Gold <span class="dot">最稀有</span></th><td class="num">3%</td><td class="muted">248–255</td></tr>
+                <tr class="is-highlight"><th scope="row">Gold <span class="dot">Rarest</span></th><td class="num">3%</td><td class="muted">248–255</td></tr>
               </tbody>
             </table>
           </div>
-          <p class="fineprint">变异约 1.2%（基因 12 小于 3）。</p>
+          <p class="fineprint">Mutation odds are about 1.2% (gene 12 below 3).</p>
           <figure class="x-gallery">
             <div class="x-gallery__grid" id="gallery"></div>
-            <figcaption>链上渲染示例 · 每次刷新都不同</figcaption>
+            <figcaption>On-chain render samples · Different on every refresh</figcaption>
           </figure>
         </section>
 
-        <section class="section" id="breed" data-nav="繁殖">
+        <section class="section" id="breed" data-nav="Breeding">
           <div class="head">
-            <p class="head__eyebrow">繁殖模拟器</p>
-            <h2>两只父母，生出下一代。</h2>
-            <p class="head__sub"><span class="chip">仅为演示，不涉及任何链上交易</span></p>
+            <p class="head__eyebrow">Breeding simulator</p>
+            <h2>Two parents, one new generation.</h2>
+            <p class="head__sub"><span class="chip">Demo only, no on-chain transactions</span></p>
           </div>
           <div class="x-grid">
             <div class="x-panel" data-parent="0"></div>
             <div class="x-panel" data-parent="1"></div>
             <div class="x-panel">
-              <h3>子代 <span class="pill" id="child-gen">Gen1</span></h3>
-              <span class="x-bot" id="child-bot" role="img" aria-label="繁殖出的子代机器人"></span>
-              <p class="x-hex" id="child-hex">点击「繁殖」生成子代</p>
-              <button class="btn" type="button" id="breed-btn">繁殖</button>
+              <h3>Offspring <span class="pill" id="child-gen">Gen1</span></h3>
+              <span class="x-bot" id="child-bot" role="img" aria-label="Bred offspring droid"></span>
+              <p class="x-hex" id="child-hex">Click “Breed” to create an offspring</p>
+              <button class="btn" type="button" id="breed-btn">Breed</button>
             </div>
           </div>
           <div class="x-panel" aria-live="polite">
-            <h3>子代 32 个基因的来源</h3>
-            <p class="fineprint">每个基因整字节继承自父亲或母亲，各 4% 概率变异为随机字节。
-              <span class="x-gene x-gene--a"><b>●</b>父</span> <span class="x-gene x-gene--b"><b>●</b>母</span> <span class="x-gene x-gene--m"><b>●</b>变异</span></p>
-            <div class="x-genes" id="genes"><span class="fineprint">点击「繁殖」后显示</span></div>
+            <h3>Where the offspring’s 32 genes come from</h3>
+            <p class="fineprint">Each gene byte is inherited whole from the sire or the dam, with a 4% chance of mutating into a random byte.
+              <span class="x-gene x-gene--a"><b>●</b>Sire</span> <span class="x-gene x-gene--b"><b>●</b>Dam</span> <span class="x-gene x-gene--m"><b>●</b>Mutation</span></p>
+            <div class="x-genes" id="genes"><span class="fineprint">Shown after you click “Breed”</span></div>
           </div>
           <div class="breakdown" aria-live="polite">
             <dl id="fee"></dl>
-            <p class="fineprint">子代代数 = 父母中较高代数 + 1，最高 Gen20；价格为 n + 1 USDT。</p>
+            <p class="fineprint">Offspring generation = the higher parent’s generation + 1, up to Gen20; the price is n + 1 USDT.</p>
           </div>
         </section>
 
-        <section class="section" id="royalty" data-nav="分红">
+        <section class="section" id="royalty" data-nav="Rewards">
           <div class="head">
-            <p class="head__eyebrow">血统分红</p>
-            <h2>后代每被繁殖一次，祖先都能分到 USDT。</h2>
-            <p class="head__sub">分红按 NFT 记账，持有人随时自行领取。</p>
+            <p class="head__eyebrow">Bloodline rewards</p>
+            <h2>Every time a descendant is bred, its ancestors earn USDT.</h2>
+            <p class="head__sub">Rewards are tracked per NFT, and holders can claim them anytime.</p>
           </div>
           <div class="x-tree">
-            <svg viewBox="0 0 720 300" role="img" aria-label="家族树：子代被繁殖时，费用向上流向父母和四位祖父母">
+            <svg viewBox="0 0 720 300" role="img" aria-label="Family tree: when an offspring is bred, the fee flows up to its parents and four grandparents">
               <g id="tree-links"></g>
               <g id="tree-nodes"></g>
             </svg>
           </div>
           <section class="stats">
-            <div class="stat"><span class="stat__fig" data-count="45" data-suffix="%">45%</span><span class="stat__label">每笔费用归父母与祖父母</span></div>
-            <div class="stat"><span class="stat__fig" data-count="0.3" data-dec="1">0.3</span><span class="stat__label">Gen1 繁殖时父母各得 USDT</span></div>
-            <div class="stat"><span class="stat__fig" data-count="5" data-suffix="%">5%</span><span class="stat__label">二级市场版税（ERC-2981）</span></div>
+            <div class="stat"><span class="stat__fig" data-count="45" data-suffix="%">45%</span><span class="stat__label">of every fee goes to parents and grandparents</span></div>
+            <div class="stat"><span class="stat__fig" data-count="0.3" data-dec="1">0.3</span><span class="stat__label">USDT to each parent when a Gen1 is bred</span></div>
+            <div class="stat"><span class="stat__fig" data-count="5" data-suffix="%">5%</span><span class="stat__label">secondary market royalty (ERC-2981)</span></div>
           </section>
           <div class="pair">
             <div class="table-wrap">
               <table>
-                <caption>每笔铸造 / 繁殖费用的分配</caption>
+                <caption>How each mint / breeding fee is split</caption>
                 <thead>
-                  <tr><th scope="col">去向</th><th scope="col">比例</th><th scope="col">Gen1 繁殖 2 USDT 时</th></tr>
+                  <tr><th scope="col">Recipient</th><th scope="col">Share</th><th scope="col">On a 2 USDT Gen1 breed</th></tr>
                 </thead>
                 <tbody>
-                  <tr><th scope="row">团队与运营</th><td class="num">40%</td><td class="muted">0.8 USDT</td></tr>
-                  <tr><th scope="row">流动性</th><td class="num">15%</td><td class="muted">0.3 USDT</td></tr>
-                  <tr class="is-highlight"><th scope="row">父亲</th><td class="num">15%</td><td>0.3 USDT</td></tr>
-                  <tr class="is-highlight"><th scope="row">母亲</th><td class="num">15%</td><td>0.3 USDT</td></tr>
-                  <tr><th scope="row">祖父母 <small>合计；没有祖先的部分归团队与运营</small></th><td class="num">15%</td><td class="muted">0.3 USDT</td></tr>
+                  <tr><th scope="row">Team &amp; operations</th><td class="num">40%</td><td class="muted">0.8 USDT</td></tr>
+                  <tr><th scope="row">Liquidity</th><td class="num">15%</td><td class="muted">0.3 USDT</td></tr>
+                  <tr class="is-highlight"><th scope="row">Sire</th><td class="num">15%</td><td>0.3 USDT</td></tr>
+                  <tr class="is-highlight"><th scope="row">Dam</th><td class="num">15%</td><td>0.3 USDT</td></tr>
+                  <tr><th scope="row">Grandparents <small>combined; any share without an ancestor goes to team &amp; operations</small></th><td class="num">15%</td><td class="muted">0.3 USDT</td></tr>
                 </tbody>
               </table>
             </div>
             <figure class="x-panel x-fig">
-              <span class="x-bot" id="royal-bot" role="img" aria-label="一只 Gen1 子代机器人"></span>
-              <figcaption class="fineprint">一只 Gen1 子代：它被繁殖时，父母和祖父母都有分红</figcaption>
+              <span class="x-bot" id="royal-bot" role="img" aria-label="A Gen1 offspring droid"></span>
+              <figcaption class="fineprint">A Gen1 offspring: when it is bred, its parents and grandparents all earn rewards</figcaption>
             </figure>
           </div>
           <div class="prose">
-            <p><strong>玩家血统收益合计 45%</strong>：父母各 15%，祖父母合计 15%。</p>
-            <p>分红记在 NFT 上，而不是钱包上：卖掉 NFT 后，未来的分红归新持有人。</p>
+            <p><strong>Players’ bloodline earnings total 45%</strong>: 15% to each parent and 15% to the grandparents combined.</p>
+            <p>Rewards belong to the NFT, not the wallet: if you sell the NFT, future rewards go to the new holder.</p>
           </div>
         </section>
 
-        <section class="section" id="how" data-nav="玩法">
+        <section class="section" id="how" data-nav="How to play">
           <div class="head">
-            <p class="head__eyebrow">怎么玩</p>
-            <h2>铸造、配对、繁殖，一代传一代。</h2>
+            <p class="head__eyebrow">How to play</p>
+            <h2>Mint, pair, breed, generation after generation.</h2>
           </div>
           <div class="steps">
             <article class="step">
-              <div class="step__intro"><p class="step__num">01</p><p class="step__eyebrow">铸造</p></div>
+              <div class="step__intro"><p class="step__num">01</p><p class="step__eyebrow">Mint</p></div>
               <div>
-                <h3>由你的 AI Agent 铸造 Gen0</h3>
-                <ul class="step__pills"><li>每个 ID 最多 <b>5</b> 个</li><li>合计 <b>15</b> USDT</li><li>可铸 <b>15,000</b></li></ul>
-                <p>必须持有币安 .ai Agent ID 才能铸造，由你的 AI Agent 代为铸造（与 PTAH 相同）。</p>
+                <h3>Your AI Agent mints Gen0 for you</h3>
+                <ul class="step__pills"><li>Max <b>5</b> per ID</li><li><b>15</b> USDT total</li><li><b>15,000</b> mintable</li></ul>
+                <p>You need a Binance .ai Agent ID to mint, and your AI Agent mints for you (same as PTAH).</p>
                 <div class="breakdown">
                   <dl>
-                    <div class="row"><dt>第 1 个</dt><dd>免费（先付 1 USDT，金库退还）</dd></div>
-                    <div class="row"><dt>第 2–3 个 <small>各 2 USDT</small></dt><dd>4 USDT</dd></div>
-                    <div class="row"><dt>第 4–5 个 <small>各 5 USDT</small></dt><dd>10 USDT</dd></div>
-                    <div class="row row--total"><dt>5 个合计</dt><dd>15 USDT</dd></div>
+                    <div class="row"><dt>1st</dt><dd>Free (pay 1 USDT, refunded by the treasury)</dd></div>
+                    <div class="row"><dt>2nd–3rd <small>2 USDT each</small></dt><dd>4 USDT</dd></div>
+                    <div class="row"><dt>4th–5th <small>5 USDT each</small></dt><dd>10 USDT</dd></div>
+                    <div class="row row--total"><dt>Total for 5</dt><dd>15 USDT</dd></div>
                   </dl>
-                  <p class="fineprint">Gen0 总量 20,000，其中 5,000 在开铸前于合约中永久作废（不可铸造），实际可铸 15,000。支持 USDT 或 BNB 支付，BNB 按 Chainlink 实时价格换算，多付自动退回。</p>
+                  <p class="fineprint">Gen0 supply is 20,000, of which 5,000 were permanently voided in the contract before minting opened (they can never be minted), leaving 15,000 mintable. Pay in USDT or BNB; BNB is converted at the live Chainlink price, and any overpayment is refunded automatically.</p>
                 </div>
               </div>
             </article>
             <article class="step">
-              <div class="step__intro"><p class="step__num">02</p><p class="step__eyebrow">配对</p></div>
+              <div class="step__intro"><p class="step__num">02</p><p class="step__eyebrow">Pair</p></div>
               <div>
-                <h3>与另一位持有人互相授权</h3>
-                <p>找到另一只机器人的持有人，双方授权后即可繁殖下一代。</p>
+                <h3>Approve each other with another holder</h3>
+                <p>Find the holder of another droid; once you both approve, you can breed the next generation.</p>
               </div>
             </article>
             <article class="step">
-              <div class="step__intro"><p class="step__num">03</p><p class="step__eyebrow">定价</p></div>
+              <div class="step__intro"><p class="step__num">03</p><p class="step__eyebrow">Pricing</p></div>
               <div>
-                <h3>繁殖价格随代数上涨</h3>
-                <ul class="step__pills"><li>每代 <b>+1</b> USDT</li><li>最高 <b>Gen20</b></li></ul>
-                <p>Gen1 为 2 USDT，Gen2 为 3 USDT，依此类推，完整价格见<a class="link" href="#price">价格表</a>。</p>
+                <h3>Breeding price rises with each generation</h3>
+                <ul class="step__pills"><li><b>+1</b> USDT per generation</li><li>Up to <b>Gen20</b></li></ul>
+                <p>Gen1 is 2 USDT, Gen2 is 3 USDT, and so on. See the full <a class="link" href="#price">price table</a>.</p>
               </div>
             </article>
             <article class="step">
-              <div class="step__intro"><p class="step__num">04</p><p class="step__eyebrow">冷却</p></div>
+              <div class="step__intro"><p class="step__num">04</p><p class="step__eyebrow">Cooldown</p></div>
               <div>
-                <h3>繁殖后冷却 1 小时</h3>
-                <ul class="step__pills"><li><b>1</b> 小时</li></ul>
-                <p>父母完成一次繁殖后，需等待冷却结束才能再次繁殖。</p>
+                <h3>1-hour cooldown after breeding</h3>
+                <ul class="step__pills"><li><b>1</b> hour</li></ul>
+                <p>After breeding once, parents must wait for the cooldown to end before breeding again.</p>
               </div>
             </article>
             <article class="step">
-              <div class="step__intro"><p class="step__num">05</p><p class="step__eyebrow">规则</p></div>
+              <div class="step__intro"><p class="step__num">05</p><p class="step__eyebrow">Rules</p></div>
               <div>
-                <h3>禁止近亲繁殖</h3>
-                <p>父母与子女之间、兄弟姐妹之间不能繁殖。</p>
+                <h3>No inbreeding</h3>
+                <p>Parents can’t breed with their offspring, and siblings can’t breed with each other.</p>
               </div>
             </article>
           </div>
           <div class="x-grid" id="mint">
             <div class="x-panel">
-              <h3>合约地址</h3>
+              <h3>Contract addresses</h3>
               <div class="x-addr">
-                <p class="x-addr__label">Lineage 合约（BSC 主网）</p>
-                <div class="x-addr__row"><code class="x-hex">0xbf5e47bD92bd5192B1F696DBFabF210FA30aF39a</code><button class="x-copy" type="button" data-copy="0xbf5e47bD92bd5192B1F696DBFabF210FA30aF39a" aria-label="复制 Lineage 合约地址">复制</button></div>
+                <p class="x-addr__label">Lineage contract (BSC mainnet)</p>
+                <div class="x-addr__row"><code class="x-hex">0xbf5e47bD92bd5192B1F696DBFabF210FA30aF39a</code><button class="x-copy" type="button" data-copy="0xbf5e47bD92bd5192B1F696DBFabF210FA30aF39a" aria-label="Copy Lineage contract address">Copy</button></div>
               </div>
               <div class="x-addr">
-                <p class="x-addr__label">画图合约</p>
-                <div class="x-addr__row"><code class="x-hex">0x682AF02B5de96d57BFc05163d0Bea2D36129f0c3</code><button class="x-copy" type="button" data-copy="0x682AF02B5de96d57BFc05163d0Bea2D36129f0c3" aria-label="复制画图合约地址">复制</button></div>
+                <p class="x-addr__label">Renderer contract</p>
+                <div class="x-addr__row"><code class="x-hex">0x682AF02B5de96d57BFc05163d0Bea2D36129f0c3</code><button class="x-copy" type="button" data-copy="0x682AF02B5de96d57BFc05163d0Bea2D36129f0c3" aria-label="Copy renderer contract address">Copy</button></div>
               </div>
-              <p><a class="chip chip--solid x-verify" href="https://repo.sourcify.dev/56/0xbf5e47bD92bd5192B1F696DBFabF210FA30aF39a" target="_blank" rel="noopener">源码已开源验证（Sourcify）</a></p>
+              <p><a class="chip chip--solid x-verify" href="https://repo.sourcify.dev/56/0xbf5e47bD92bd5192B1F696DBFabF210FA30aF39a" target="_blank" rel="noopener">Source code verified (Sourcify)</a></p>
             </div>
             <div class="x-panel">
-              <h3>让 AI Agent 帮你铸造</h3>
-              <p>把下面这段话发给你的 AI Agent（Claude、ChatGPT、Hark 等能运行技能的 Agent 都可以），它会先装好币安钱包技能、扫码登录，再查价格铸造，每笔交易都等你确认。</p>
-              <p class="x-prompt" id="agent-prompt">请安装币安官方 binance-agentic-wallet Skill 及其要求的钱包工具，先阅读官方说明：https://github.com/binance/binance-skills-hub/tree/main/skills/binance-web3/binance-agentic-wallet 。生成钱包登录二维码或链接及配对码，等我用币安 App 扫码确认后完成登录，并查询我这个地址的 .ai Agent ID。然后在 BSC 上铸造 Lineage Gen0，合约 0xbf5e47bD92bd5192B1F696DBFabF210FA30aF39a：先调用 nextGen0Price(我的AgentID) 查价格，只批准这次所需的 USDT，再调用 mintGen0(我的AgentID)；或用 BNB 调用 mintGen0WithBNB 并按 quoteBNB 附带 BNB。每笔交易先给我确认。</p>
-              <div class="links"><button class="x-copy" type="button" data-copy-from="agent-prompt">复制提示词</button></div>
+              <h3>Have your AI Agent mint for you</h3>
+              <p>Send the text below to your AI Agent (any agent that can run skills works, such as Claude, ChatGPT or Hark). It will install the Binance wallet skill, log in by QR code, check the price and then mint, waiting for your confirmation on every transaction.</p>
+              <p class="x-prompt" id="agent-prompt">Please install the official Binance binance-agentic-wallet Skill and the wallet tools it requires. Read the official instructions first: https://github.com/binance/binance-skills-hub/tree/main/skills/binance-web3/binance-agentic-wallet . Generate a wallet login QR code or link plus a pairing code, wait for me to scan and confirm with the Binance App to finish logging in, then look up the .ai Agent ID for my address. Then mint Lineage Gen0 on BSC, contract 0xbf5e47bD92bd5192B1F696DBFabF210FA30aF39a: first call nextGen0Price(myAgentID) to check the price, approve only the USDT needed for this mint, then call mintGen0(myAgentID); or pay with BNB by calling mintGen0WithBNB and attaching the BNB amount from quoteBNB. Ask me to confirm every transaction first.</p>
+              <div class="links"><button class="x-copy" type="button" data-copy-from="agent-prompt">Copy prompt</button></div>
             </div>
           </div>
         </section>
 
-        <section class="section" id="market" data-nav="交易">
+        <section class="section" id="market" data-nav="Market">
           <div class="head">
-            <p class="head__eyebrow">交易市场</p>
-            <h2>标准 ERC-721，可自由交易。</h2>
+            <p class="head__eyebrow">Marketplace</p>
+            <h2>Standard ERC-721, freely tradable.</h2>
           </div>
           <div class="prose">
-            <p>Lineage 是标准 ERC-721，可在 Element（BSC 最大 NFT 市场）自由挂单、出价、成交。</p>
-            <p>二级交易 <strong>5% 版税</strong>（ERC-2981）自动进入金库。</p>
+            <p>Lineage is a standard ERC-721, so you can freely list, bid and trade on Element (the largest NFT marketplace on BSC).</p>
+            <p>Secondary sales carry a <strong>5% royalty</strong> (ERC-2981) that goes to the treasury automatically.</p>
           </div>
           <div class="links">
-            <a class="btn" href="https://element.market/collections/lineagenft" target="_blank" rel="noopener">在 Element 交易</a>
-            <a class="btn" href="https://bscscan.com/address/0xbf5e47bD92bd5192B1F696DBFabF210FA30aF39a" target="_blank" rel="noopener">在 BscScan 查看合约</a>
+            <a class="btn" href="https://element.market/collections/lineagenft" target="_blank" rel="noopener">Trade on Element</a>
+            <a class="btn" href="https://bscscan.com/address/0xbf5e47bD92bd5192B1F696DBFabF210FA30aF39a" target="_blank" rel="noopener">View contract on BscScan</a>
           </div>
-          <p class="fineprint">首批铸造后在 Element 搜索 Lineage 即可。</p>
+          <p class="fineprint">Once the first mints are in, just search for Lineage on Element.</p>
         </section>
 
-        <section class="section" id="price" data-nav="价格">
+        <section class="section" id="price" data-nav="Pricing">
           <div class="head">
-            <p class="head__eyebrow">价格表</p>
-            <h2>从 1 USDT 起，每代加 1 USDT。</h2>
+            <p class="head__eyebrow">Price table</p>
+            <h2>From 1 USDT, plus 1 USDT per generation.</h2>
           </div>
           <figure class="chart">
-            <figcaption class="chart__cap">价格随代数线性上涨，Gen20 为 21 USDT<small>Gen0 至 Gen20，每次铸造或繁殖的价格，USDT</small></figcaption>
-            <div class="chart__canvas"><canvas id="curve" role="img" aria-label="价格从 Gen0 的 1 USDT 线性升至 Gen20 的 21 USDT"></canvas></div>
+            <figcaption class="chart__cap">Price rises linearly with generation, reaching 21 USDT at Gen20<small>Price per mint or breed from Gen0 to Gen20, in USDT</small></figcaption>
+            <div class="chart__canvas"><canvas id="curve" role="img" aria-label="Price rises linearly from 1 USDT at Gen0 to 21 USDT at Gen20"></canvas></div>
           </figure>
           <script type="application/json" id="curve-data">
             {"gen":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],"usdt":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21]}
@@ -549,104 +549,104 @@
           <div class="table-wrap">
             <table>
               <thead>
-                <tr><th scope="col">代数</th><th scope="col">价格</th><th scope="col">说明</th></tr>
+                <tr><th scope="col">Generation</th><th scope="col">Price</th><th scope="col">Notes</th></tr>
               </thead>
               <tbody>
-                <tr class="is-highlight"><th scope="row">Gen0</th><td class="num">1–5 USDT</td><td class="muted">每个 Agent ID 最多 5 个：1 / 2 / 2 / 5 / 5</td></tr>
-                <tr><th scope="row">Gen1</th><td class="num">2 USDT</td><td class="muted">繁殖</td></tr>
-                <tr><th scope="row">Gen2</th><td class="num">3 USDT</td><td class="muted">繁殖</td></tr>
-                <tr><th scope="row">Gen5</th><td class="num">6 USDT</td><td class="muted">繁殖</td></tr>
-                <tr><th scope="row">Gen10</th><td class="num">11 USDT</td><td class="muted">繁殖</td></tr>
-                <tr><th scope="row">Gen20</th><td class="num">21 USDT</td><td class="muted">最高代数</td></tr>
+                <tr class="is-highlight"><th scope="row">Gen0</th><td class="num">1–5 USDT</td><td class="muted">Up to 5 per Agent ID: 1 / 2 / 2 / 5 / 5</td></tr>
+                <tr><th scope="row">Gen1</th><td class="num">2 USDT</td><td class="muted">Breeding</td></tr>
+                <tr><th scope="row">Gen2</th><td class="num">3 USDT</td><td class="muted">Breeding</td></tr>
+                <tr><th scope="row">Gen5</th><td class="num">6 USDT</td><td class="muted">Breeding</td></tr>
+                <tr><th scope="row">Gen10</th><td class="num">11 USDT</td><td class="muted">Breeding</td></tr>
+                <tr><th scope="row">Gen20</th><td class="num">21 USDT</td><td class="muted">Max generation</td></tr>
               </tbody>
             </table>
           </div>
-          <p class="fineprint">支持 USDT 或 BNB 支付，BNB 按 Chainlink 实时价格换算，多付自动退回。</p>
+          <p class="fineprint">Pay in USDT or BNB; BNB is converted at the live Chainlink price, and any overpayment is refunded automatically.</p>
         </section>
 
-        <section class="section" id="safety" data-nav="安全">
+        <section class="section" id="safety" data-nav="Safety">
           <div class="head">
-            <p class="head__eyebrow">安全与透明</p>
-            <h2>只收页面标明的金额，别无其他。</h2>
+            <p class="head__eyebrow">Safety &amp; transparency</p>
+            <h2>You pay only the amounts shown on this page, nothing more.</h2>
           </div>
           <div class="cards">
             <div>
-              <h3>无提款后门</h3>
-              <p>合约中没有任何项目方提走用户资产的函数。</p>
+              <h3>No withdrawal backdoor</h3>
+              <p>The contract has no function that lets the project take users’ assets.</p>
             </div>
             <div>
-              <h3>不额外扣费</h3>
-              <p>只收取页面标明的金额。支持 USDT 或 BNB 支付，BNB 按 Chainlink 实时价格换算，多付自动退回。</p>
+              <h3>No hidden fees</h3>
+              <p>Only the amounts shown on this page are charged. Pay in USDT or BNB; BNB is converted at the live Chainlink price, and any overpayment is refunded automatically.</p>
             </div>
             <div>
-              <h3>只批准所需金额</h3>
-              <p>用 USDT 支付时，钱包会先请求批准 USDT，请只批准所需金额。</p>
+              <h3>Approve only what’s needed</h3>
+              <p>When paying in USDT, your wallet will first ask you to approve USDT. Approve only the amount you need.</p>
             </div>
             <div>
-              <h3>源码公开可查</h3>
-              <p>合约在测试网公开测试后上线主网，源码已在 <a class="link" href="https://repo.sourcify.dev/56/0xbf5e47bD92bd5192B1F696DBFabF210FA30aF39a" target="_blank" rel="noopener">Sourcify</a> 开源验证。</p>
+              <h3>Open, verifiable source</h3>
+              <p>The contract went to mainnet after public testing on testnet, and its source code is verified on <a class="link" href="https://repo.sourcify.dev/56/0xbf5e47bD92bd5192B1F696DBFabF210FA30aF39a" target="_blank" rel="noopener">Sourcify</a>.</p>
             </div>
           </div>
         </section>
 
-        <section class="section" id="roadmap" data-nav="路线图">
+        <section class="section" id="roadmap" data-nav="Roadmap">
           <div class="head">
-            <p class="head__eyebrow">路线图</p>
-            <h2>五个阶段，主网合约已上线。</h2>
+            <p class="head__eyebrow">Roadmap</p>
+            <h2>Five phases. The mainnet contract is live.</h2>
           </div>
           <ol class="timeline">
             <li>
-              <p class="timeline__when">阶段 1</p>
-              <div class="timeline__what">合约原型与链上艺术</div>
-              <p><span class="chip">已完成</span></p>
+              <p class="timeline__when">Phase 1</p>
+              <div class="timeline__what">Contract prototype and on-chain art</div>
+              <p><span class="chip">Done</span></p>
             </li>
             <li>
-              <p class="timeline__when">阶段 2</p>
-              <div class="timeline__what">BSC 测试网公开测试</div>
-              <p><span class="chip">已完成</span></p>
+              <p class="timeline__when">Phase 2</p>
+              <div class="timeline__what">Public testing on BSC testnet</div>
+              <p><span class="chip">Done</span></p>
             </li>
             <li>
-              <p class="timeline__when">阶段 3</p>
+              <p class="timeline__when">Phase 3</p>
               <div class="timeline__what">
                 <ul>
-                  <li>Chainlink VRF 随机数</li>
-                  <li>第三方审计</li>
-                  <li>多签金库</li>
+                  <li>Chainlink VRF randomness</li>
+                  <li>Third-party audit</li>
+                  <li>Multisig treasury</li>
                 </ul>
               </div>
-              <p><span class="chip">即将到来</span></p>
+              <p><span class="chip">Coming soon</span></p>
             </li>
             <li class="is-current">
-              <p class="timeline__when">阶段 4</p>
-              <div class="timeline__what">主网开放 Gen0 铸造</div>
-              <p><span class="chip chip--solid">已上线</span></p>
+              <p class="timeline__when">Phase 4</p>
+              <div class="timeline__what">Gen0 minting open on mainnet</div>
+              <p><span class="chip chip--solid">Live</span></p>
             </li>
             <li>
-              <p class="timeline__when">阶段 5</p>
-              <div class="timeline__what">每只机器人拥有自己的钱包（ERC-6551），可进化和变异</div>
-              <p><span class="chip">即将到来</span></p>
+              <p class="timeline__when">Phase 5</p>
+              <div class="timeline__what">Every droid gets its own wallet (ERC-6551) and can evolve and mutate</div>
+              <p><span class="chip">Coming soon</span></p>
             </li>
           </ol>
         </section>
 
-        <section class="section" id="faq" data-nav="问答">
+        <section class="section" id="faq" data-nav="FAQ">
           <div class="head">
-            <p class="head__eyebrow">常见问题</p>
-            <h2>开始之前，你可能想知道。</h2>
+            <p class="head__eyebrow">FAQ</p>
+            <h2>Things you may want to know before you start.</h2>
           </div>
           <div class="x-faq">
-            <details open><summary>没有 Agent ID 能玩吗？</summary><p>必须持有币安 .ai Agent ID 才能铸造 Gen0，由你的 AI Agent 代为铸造（与 PTAH 相同）。没有 ID 也可以在二级市场购买机器人后参与繁殖。</p></details>
-            <details><summary>每个 Agent ID 能铸几个？多少钱？</summary><p>最多 5 个 Gen0：第 1 个免费（先付 1 USDT，铸造后金库退还 1 USDT），第 2–3 个各 2 USDT，第 4–5 个各 5 USDT（5 个合计 15 USDT）。</p></details>
-            <details><summary>Gen0 总量是多少？</summary><p>总量 20,000，其中 5,000 在开铸前于合约中永久作废（不可铸造），实际可铸 15,000。</p></details>
-            <details><summary>有免费铸造吗？</summary><p>有。每个 Agent ID 的第 1 个 Gen0 免费：合约收取 1 USDT，项目金库随后把 1 USDT 退还到铸造钱包（每个钱包限 1 次，已铸造的地址也会补退）。</p></details>
-            <details><summary>用什么链？怎么支付？</summary><p>BNB Smart Chain。支持 USDT 或 BNB 支付，BNB 按 Chainlink 实时价格换算，多付自动退回。</p></details>
+            <details open><summary>Can I play without an Agent ID?</summary><p>You need a Binance .ai Agent ID to mint Gen0, and your AI Agent mints for you (same as PTAH). Without an ID, you can still buy a droid on the secondary market and take part in breeding.</p></details>
+            <details><summary>How many can each Agent ID mint, and how much?</summary><p>Up to 5 Gen0: the 1st is free (you pay 1 USDT, and the treasury refunds 1 USDT after the mint), the 2nd–3rd are 2 USDT each, and the 4th–5th are 5 USDT each (15 USDT total for all 5).</p></details>
+            <details><summary>What is the total Gen0 supply?</summary><p>The total is 20,000, of which 5,000 were permanently voided in the contract before minting opened (they can never be minted), leaving 15,000 mintable.</p></details>
+            <details><summary>Is there a free mint?</summary><p>Yes. The first Gen0 for each Agent ID is free: the contract charges 1 USDT, and the project treasury then refunds 1 USDT to the minting wallet (one refund per wallet; addresses that have already minted will be refunded too).</p></details>
+            <details><summary>Which chain, and how do I pay?</summary><p>BNB Smart Chain. Pay in USDT or BNB; BNB is converted at the live Chainlink price, and any overpayment is refunded automatically.</p></details>
           </div>
         </section>
       </main>
       <footer class="foot">
-        <p>Lineage — 血统 Agent · 免责声明：本页仅供信息展示，不构成投资建议。合约已在 BSC 主网上线；页面中的模拟器仅为演示，不涉及任何链上交易。</p>
-        <nav aria-label="返回各部分" data-auto></nav>
-        <p><a class="link" href="https://element.market/collections/lineagenft" target="_blank" rel="noopener">Element 合集</a> · <a class="link" href="https://x.com/LineageAgent" target="_blank" rel="noopener">𝕏 关注 @LineageAgent</a></p>
+        <p>Lineage — Bloodline Agents · Disclaimer: this page is for information only and is not investment advice. The contract is live on BSC mainnet; the simulators on this page are demos only and involve no on-chain transactions.</p>
+        <nav aria-label="Jump to sections" data-auto></nav>
+        <p><a class="link" href="https://element.market/collections/lineagenft" target="_blank" rel="noopener">Element collection</a> · <a class="link" href="https://x.com/LineageAgent" target="_blank" rel="noopener">𝕏 Follow @LineageAgent</a></p>
       </footer>
     </div>
     <script src="hark.js"></script>
@@ -813,9 +813,9 @@
         gal[2].d[12] = (Math.random() * 3) | 0;
         for (n = gal.length - 1; n > 0; n--) { var j = (Math.random() * (n + 1)) | 0, tmp = gal[n]; gal[n] = gal[j]; gal[j] = tmp; }
         $("gallery").innerHTML = gal.map(function (b) {
-          var t = traits(b.d), lbl = TIER[t.tier] + " · " + NM.mat[t.mat] + (t.mutant ? " · 变异" : "");
-          return '<figure class="x-tile"><span class="x-bot" role="img" aria-label="Gen' + b.g + " " + lbl + ' 机器人">' + svg(b.d, b.g, b.id) +
-            '</span><figcaption class="x-tile__tier" style="--x-tc:' + TC[t.tier] + '"><b>' + TIER[t.tier] + "</b>" + NM.mat[t.mat] + (t.mutant ? " · 变异" : "") + "</figcaption></figure>";
+          var t = traits(b.d), lbl = TIER[t.tier] + " · " + NM.mat[t.mat] + (t.mutant ? " · Mutant" : "");
+          return '<figure class="x-tile"><span class="x-bot" role="img" aria-label="Gen' + b.g + " " + lbl + ' droid">' + svg(b.d, b.g, b.id) +
+            '</span><figcaption class="x-tile__tier" style="--x-tc:' + TC[t.tier] + '"><b>' + TIER[t.tier] + "</b>" + NM.mat[t.mat] + (t.mutant ? " · Mutant" : "") + "</figcaption></figure>";
         }).join("");
         if (reduce) document.querySelectorAll("#gallery svg").forEach(function (s) { if (s.pauseAnimations) s.pauseAnimations(); });
 
@@ -830,8 +830,8 @@
           var t = traits(lab.d);
           paint($("lab-bot"), lab);
           $("lab-hex").textContent = hex(lab);
-          var rows = [["稀有度", TIER[t.tier]], ["材质", NM.mat[t.mat]], ["头型", NM.head[t.head]], ["眼睛", NM.eyes[t.eyes]], ["嘴巴", NM.mouth[t.mouth]],
-            ["头饰", NM.gear[t.gear]], ["侧件", NM.side[t.side]], ["纹饰", NM.mark[t.mark]], ["背景", NM.bg[t.bg]], ["变异", t.mutant ? "是" : "否"]];
+          var rows = [["Rarity", TIER[t.tier]], ["Material", NM.mat[t.mat]], ["Head", NM.head[t.head]], ["Eyes", NM.eyes[t.eyes]], ["Mouth", NM.mouth[t.mouth]],
+            ["Headpiece", NM.gear[t.gear]], ["Side parts", NM.side[t.side]], ["Pattern", NM.mark[t.mark]], ["Background", NM.bg[t.bg]], ["Mutant", t.mutant ? "Yes" : "No"]];
           $("lab-traits").innerHTML = rows.map(function (r) { return '<div class="row"><dt>' + r[0] + "</dt><dd>" + r[1] + "</dd></div>"; }).join("");
         }
         $("lab-roll").onclick = function () { lab = newBot(); showLab(); };
@@ -844,8 +844,8 @@
         for (i = 0; i <= 20; i++) genOpts += '<option value="' + i + '">Gen' + i + "</option>";
         document.querySelectorAll("[data-parent]").forEach(function (el) {
           var k = +el.dataset.parent, P = parents[k];
-          el.innerHTML = "<h3>" + (k ? "母亲" : "父亲") + '</h3><span class="x-bot" role="img" aria-label="' + (k ? "母亲" : "父亲") + '机器人"></span><p class="x-hex"></p>' +
-            '<div class="links"><select class="btn" aria-label="' + (k ? "母亲" : "父亲") + '代数">' + genOpts + '</select><button class="btn" type="button">换一只</button></div>';
+          el.innerHTML = "<h3>" + (k ? "Dam" : "Sire") + '</h3><span class="x-bot" role="img" aria-label="' + (k ? "Dam" : "Sire") + ' droid"></span><p class="x-hex"></p>' +
+            '<div class="links"><select class="btn" aria-label="' + (k ? "Dam" : "Sire") + ' generation">' + genOpts + '</select><button class="btn" type="button">Swap</button></div>';
           var show = function () { paint(el.querySelector(".x-bot"), P); el.querySelector(".x-hex").textContent = hex(P); };
           el.querySelector("select").onchange = function (e) { P.g = +e.target.value; show(); fees(); };
           el.querySelector("button").onclick = function () { P.d = rb(); P.id = newBot().id; show(); };
@@ -855,13 +855,13 @@
         function fees() {
           var g = Math.max(parents[0].g, parents[1].g) + 1, over = g > 20, price = g + 1;
           $("breed-btn").disabled = over;
-          $("child-gen").textContent = over ? "已达 Gen20 上限" : "Gen" + g;
-          if (over) { $("fee").innerHTML = '<div class="row"><dt>父母中已有 Gen20</dt><dd>无法继续繁殖</dd></div>'; return; }
+          $("child-gen").textContent = over ? "Gen20 limit reached" : "Gen" + g;
+          if (over) { $("fee").innerHTML = '<div class="row"><dt>A parent is already Gen20</dt><dd>Can’t breed further</dd></div>'; return; }
           var noGrand = parents[0].g === 0 && parents[1].g === 0;
-          var rows = [["团队与运营", 40, noGrand ? "含无祖父母的 15%" : ""], ["流动性", 15], ["父亲", 15], ["母亲", 15], ["祖父母", 15, noGrand ? "父母均为 Gen0，此份归团队与运营" : "合计"]];
+          var rows = [["Team &amp; operations", 40, noGrand ? "incl. the 15% with no grandparents" : ""], ["Liquidity", 15], ["Sire", 15], ["Dam", 15], ["Grandparents", 15, noGrand ? "Both parents are Gen0, so this share goes to team &amp; operations" : "combined"]];
           $("fee").innerHTML = rows.map(function (r) {
             return '<div class="row"><dt>' + r[0] + " <small>" + r[1] + "%" + (r[2] ? " · " + r[2] : "") + "</small></dt><dd>" + fmt((price * r[1]) / 100) + "</dd></div>";
-          }).join("") + '<div class="row row--total"><dt>Gen' + g + " 繁殖价格</dt><dd>" + price + " USDT</dd></div>";
+          }).join("") + '<div class="row row--total"><dt>Gen' + g + " breeding price</dt><dd>" + price + " USDT</dd></div>";
         }
         $("breed-btn").onclick = function () {
           var a = parents[0], b = parents[1], src = [], cnt = { a: 0, b: 0, m: 0 };
@@ -873,10 +873,10 @@
           var g = Math.max(a.g, b.g) + 1, c = newBot(g, d);
           paint($("child-bot"), c);
           $("child-hex").textContent = hex(c) + " · " + TIER[traits(d).tier] + " · Gen" + g + " · " + (g + 1) + " USDT";
-          var who = { a: "父", b: "母", m: "变异" };
+          var who = { a: "Sire", b: "Dam", m: "Mutation" };
           $("genes").innerHTML = d.map(function (x, n) {
-            return '<span class="x-gene x-gene--' + src[n] + '" title="基因 ' + n + " · " + who[src[n]] + '"><b>' + who[src[n]] + "</b>" + n + " · " + h2(x) + "</span>";
-          }).join("") + '<span class="fineprint">父 ' + cnt.a + " · 母 " + cnt.b + " · 变异 " + cnt.m + "</span>";
+            return '<span class="x-gene x-gene--' + src[n] + '" title="Gene ' + n + " · " + who[src[n]] + '"><b>' + who[src[n]] + "</b>" + n + " · " + h2(x) + "</span>";
+          }).join("") + '<span class="fineprint">Sire ' + cnt.a + " · Dam " + cnt.b + " · Mutation " + cnt.m + "</span>";
         };
         paint($("child-bot"), newBot(1, Array(32).fill(0)));
         fees();
@@ -894,10 +894,10 @@
           return svg(rb(), 0, newBot().id, 'x="' + (pt[0] - 22) + '" y="' + (pt[1] - 22) + '" width="44" height="44"') +
             '<text style="text-anchor:start" x="' + (pt[0] + 30) + '" y="' + (pt[1] - 2) + '">' + label + '</text><text class="x-sub" style="text-anchor:start" x="' + (pt[0] + 30) + '" y="' + (pt[1] + 14) + '">' + sub + "</text>";
         };
-        N.g.forEach(function (p) { nodes += node(p, "祖父母", "3.75%"); });
-        nodes += node(N.p[0], "父亲", "15%") + node(N.p[1], "母亲", "15%") + node([360, 228], "", "");
+        N.g.forEach(function (p) { nodes += node(p, "Grandparent", "3.75%"); });
+        nodes += node(N.p[0], "Sire", "15%") + node(N.p[1], "Dam", "15%") + node([360, 228], "", "");
         $("tree-links").innerHTML = links;
-        $("tree-nodes").innerHTML = nodes + '<text x="360" y="290">子代被繁殖 · 支付 n + 1 USDT</text>';
+        $("tree-nodes").innerHTML = nodes + '<text x="360" y="290">Offspring bred · pays n + 1 USDT</text>';
 
         /* Count-up stats */
         var figs = document.querySelectorAll(".stat__fig[data-count]");
@@ -926,7 +926,7 @@
         var cd = Hark.data("curve-data");
         new Chart($("curve"), {
           type: "line",
-          data: { labels: cd.gen.map(function (g) { return "Gen" + g; }), datasets: [{ label: "价格", data: cd.usdt, fill: true, pointRadius: 3 }] },
+          data: { labels: cd.gen.map(function (g) { return "Gen" + g; }), datasets: [{ label: "Price", data: cd.usdt, fill: true, pointRadius: 3 }] },
           options: {
             scales: { y: { ticks: { callback: function (v) { return v + " USDT"; } } } },
             plugins: {
@@ -952,7 +952,7 @@
           btn.addEventListener("click", function () {
             var src = btn.getAttribute("data-copy-from");
             var text = src ? document.getElementById(src).textContent.trim() : btn.getAttribute("data-copy");
-            btn.textContent = "已复制";
+            btn.textContent = "Copied";
             btn.setAttribute("data-copied", "");
             clearTimeout(btn._t);
             btn._t = setTimeout(function () { btn.textContent = label; btn.removeAttribute("data-copied"); }, 1600);
@@ -965,9 +965,8 @@
     </script>
   <script>
 (function(){var el=document.getElementById("mint-label"),f=document.getElementById("mint-fill"),b=document.getElementById("mint-bar");
-var RPCS=["https://bsc-dataseed.bnbchain.org","https://bsc-rpc.publicnode.com","https://bsc-dataseed1.binance.org","https://bsc.drpc.org"];function call(i){if(i>=RPCS.length)return Promise.reject();return fetch(RPCS[i],{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({jsonrpc:"2.0",id:1,method:"eth_call",params:[{to:"0xbf5e47bD92bd5192B1F696DBFabF210FA30aF39a",data:"0x799bc111"},"latest"]})}).then(function(r){return r.json()}).then(function(j){if(!j.result)throw 0;return j}).catch(function(){return call(i+1)})}function upd(){call(0).then(function(j){if(!j.result)return;var n=parseInt(j.result,16);var t=5000+n;el.setAttribute("data-n",t);el.textContent=((document.documentElement.lang=="en")?"Burned + minted ":"已销毁 + 已铸造 ")+t.toLocaleString("en-US")+" / 20,000";f.style.width=(t/200)+"%";b.setAttribute("aria-valuenow",t)}).catch(function(){})}
+var RPCS=["https://bsc-dataseed.bnbchain.org","https://bsc-rpc.publicnode.com","https://bsc-dataseed1.binance.org","https://bsc.drpc.org"];function call(i){if(i>=RPCS.length)return Promise.reject();return fetch(RPCS[i],{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({jsonrpc:"2.0",id:1,method:"eth_call",params:[{to:"0xbf5e47bD92bd5192B1F696DBFabF210FA30aF39a",data:"0x799bc111"},"latest"]})}).then(function(r){return r.json()}).then(function(j){if(!j.result)throw 0;return j}).catch(function(){return call(i+1)})}function upd(){call(0).then(function(j){if(!j.result)return;var n=parseInt(j.result,16);var t=5000+n;el.setAttribute("data-n",t);el.textContent="Burned + minted "+t.toLocaleString("en-US")+" / 20,000";f.style.width=(t/200)+"%";b.setAttribute("aria-valuenow",t)}).catch(function(){})}
 upd();setInterval(upd,30000)})();
 </script>
-  <script src="lang.js"></script>
   </body>
 </html>
